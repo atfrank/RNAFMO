@@ -18,7 +18,7 @@ else
 	# beginning, adds - every three rows, adds 0 every three rows, print column as row and 
 	# separate with commas
 	sed '2d' ${file} | awk -v atm1="C5'" -v atm2="O5'" '{if($3==atm1 || 
-	$3==atm2) print $2}' | sed -e "\$a131" | sed '0~2 s/$/\n0/g' | sed '2~3 s/^/-/g' | 
+	$3==atm2) print $2}' | sed "\$a $ATOMS" | sed '0~2 s/$/\n0/g' | sed '2~3 s/^/-/g' | 
 	sed '1s/^/0\n/' | awk 'BEGIN { ORS = ", " } { print }' | sed '$s/..$//' > indat.txt
 
 	#ICHARGE
