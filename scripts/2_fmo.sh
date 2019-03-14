@@ -17,11 +17,7 @@ else
 	#deletes row 2, prints column 2 with C5’ and O5’, adds last row of file, adds 0 in the 
 	# beginning, adds - every three rows, adds 0 every three rows, print column as row and 
 	# separate with commas
-<<<<<<< HEAD
-	sed '2d' ${file} | awk -v atm1="C5'" -v atm2="O5'" '{if($3==atm1 || 
-=======
 	grep "ATOM" ${file} | sed '2d' | awk -v atm1="C5'" -v atm2="O5'" '{if($3==atm1 || 
->>>>>>> b105cff045b4431eb08b3d2ba20d72f853ccce0c
 	$3==atm2) print $2}' | sed "\$a $ATOMS" | sed '0~2 s/$/\n0/g' | sed '2~3 s/^/-/g' | 
 	sed '1s/^/0\n/' | awk 'BEGIN { ORS = ", " } { print }' | sed '$s/..$//' > indat.txt
 	
@@ -43,7 +39,7 @@ else
 	echo "      MODGRD=10"
 	echo "      MODMUL=0"
 	echo "      MAXCAO=5"
-	echo "      MAXBND=4"
+	echo "      MAXBND=NFRAG+2"
 	echo "      NLAYER=1"
 	echo "      NFRAG=$NFRAG"
 	echo "      ICHARG(1)=`cat icharge.txt`"
