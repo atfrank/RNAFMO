@@ -30,12 +30,10 @@ else
 	#row and separate with commas
 	awk -v atm1="C5'" '{if($3==atm1) print '-1'}' ${file} | sed '2d' | 
 	sed -e "\$a0" | awk 'BEGIN { ORS = ", " } { print }' | sed '$s/..$//' | awk '{print}' > icharge.txt
-
 	#FRGNAM
 	#print number of fragments in ascending order, add “frag” in the beginning of each row, 
 	#print column as row and separate with commas
 	FRAGNAM=`seq $NFRAG | awk '{print "Frag" $0}' | awk 'BEGIN { ORS = ", " } { print }' | sed '$s/..$//'`
-
 	#FMOBND
 	sed '2d' ${file} | awk -v atm1="C5'" -v atm2="O5'" '{if($3==atm1 || 
 	$3==atm2) print $2}' | sed -n '1~2!p' | awk '{print $1, "  ", $2 = $1 + 1, "  ", $3 = "3-21G", "  ", $4 = "MINI"}'| awk '{print "      -"$0}' > fmobnd.txt
