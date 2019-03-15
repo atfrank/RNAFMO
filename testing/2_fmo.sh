@@ -19,13 +19,13 @@ else
 	# beginning, adds - every three rows, adds 0 every three rows, print column as row and 
 	# separate with commas
 	grep "ATOM" ${file} | awk -v atm1="C5'" -v atm2="O5'" '{if($2==1 || ($3==atm1 && $2>10) || 
-	($3==atm2 && $2>10)) print $2}' | sed "\$a $ATOMS" | sed '0~2 s/$/\n0/g'  | 
+	($3==atm2 && $2>10)) print $2}' | sed "\$a $ATOMS" |
 	awk '{
-	if (NR%3) 
-	printf("%s   ", $0)
+	if (NR%2) 
+	printf("%s   -", $0)
 	else 
 	printf("%s\n", $0)
-	}' > indat.txt
+	}' | sed 's/$/   0/' | sed 's/^/               /' > indat.txt
 	
 	#ICHARGE
 	#prints -1 when column 3 shows C5’, deletes 2nd row, adds 0 at the end, print column as 
@@ -56,7 +56,8 @@ else
 	echo "      NFRAG=$NFRAG"
 	echo "      ICHARG(1)=`cat icharge.txt`"
 	echo "      FRGNAM(1)=$FRAGNAM"
-	echo "      indat(1)=`cat indat.txt`"
+	echo "      indat(1)=0"
+	echo "`cat indat.txt`"
 	echo " \$END"
 	echo
 	echo " \$FMOBND"
