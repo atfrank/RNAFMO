@@ -12,6 +12,7 @@ else
 	#NFRAG
 	#counts number of residues and prints number
 	NFRAG=`grep "C1'" ${file}  | wc -l`
+	NFRAG=$((NFRAG+2))
 
 	#INDAT
 	#deletes row 2, prints column 2 with C5’ and O5’, adds last row of file, adds 0 in the 
