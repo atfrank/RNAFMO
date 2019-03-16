@@ -13,10 +13,10 @@ then
 
     # run GAMESS calculation
     mkdir -p ${rna}/gamess/usrc_${model} ${rna}/gamess/src_${model}
-    ./rungms ${rna}_nlb_decoy_${model}.inp R3 8 /home/afrankz/local_software/repo/RNAFMO/testing/${rna}/gamess/usrc_${model} /home/afrankz/local_software/repo/RNAFMO/testing/${rna}/gamess/src_${model}/ > ${rna}_nlb_decoy_${model}.log 
+    ./rungms ${rna}_nlb_decoy_${model}.inp R3 8 /home/hazwong/test/git_repository/RNAFMO/testing/${rna}/gamess/usrc_${model} /home/hazwong/test/git_repository/RNAFMO/testing/${rna}/gamess/src_${model}/ > ${rna}_nlb_decoy_${model}.log 
 fi
 
-# submit: sbatch --array=1-10%10 -N1 -p frank submit.sh 1XHP
+# submit: sbatch --array=1-100%25 -N1 -p frank submit.sh 1XHP
 # cancel: scancel XXXXX
 # check: sq
 # more information on using SLURM see: https://slurm.schedmd.com/tutorials.html

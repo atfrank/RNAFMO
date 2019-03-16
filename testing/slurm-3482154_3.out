@@ -1,0 +1,9 @@
+	This module will set up environment variables
+	for Eigen.
+rm: No match.
+cp 1XHP_nlb_decoy_3.inp /home/hazwong/test/git_repository/RNAFMO/testing/1XHP/gamess/usrc_3/1XHP_nlb_decoy_3.F05
+unset echo
+setenv OUTPUT /home/hazwong/test/git_repository/RNAFMO/testing/1XHP/gamess/usrc_3/1XHP_nlb_decoy_3.F06
+setenv PUNCH /home/hazwong/test/git_repository/RNAFMO/testing/1XHP/gamess/usrc_3/1XHP_nlb_decoy_3.F07
+unset echo
+/export/apps/gamess/src/build//ddikick.x /export/apps/gamess/src/build//gamess.R3.x 1XHP_nlb_decoy_3 -ddi 1 8 gollum089.lsa.umich.edu:cpus=8 -scr /home/hazwong/test/git_repository/RNAFMO/testing/1XHP/gamess/usrc_3

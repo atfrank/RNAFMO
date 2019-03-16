@@ -1,0 +1,1611 @@
+----- GAMESS execution script 'rungms' -----
+This job is running on host gollum089.lsa.umich.edu
+under operating system Linux at Sat Mar 16 14:09:22 EDT 2019
+Available scratch disk space (Kbyte units) at beginning of the job is
+Filesystem             1K-blocks        Used   Available Use% Mounted on
+frank-00:/home/hazwong
+                     58597580800 30524649472 28072931328  53% /home/hazwong
+GAMESS temporary binary files will be written to /home/hazwong/test/git_repository/RNAFMO/testing/1XHP/gamess/usrc_2
+GAMESS supplementary output files will be written to /home/hazwong/test/git_repository/RNAFMO/testing/1XHP/gamess/src_2/
+Copying input file 1XHP_nlb_decoy_2.inp to your run's scratch directory...
+This is a GDDI run, keeping various output files on local disks
+ 
+Assuming a single but multicore node.
+ 
+
+ Distributed Data Interface kickoff program.
+ Initiating 8 compute processes on 1 nodes to run the following command:
+ /export/apps/gamess/src/build//gamess.R3.x 1XHP_nlb_decoy_2 
+
+          ******************************************************
+          *         GAMESS VERSION = 30 SEP 2018 (R3)         *
+          *             FROM IOWA STATE UNIVERSITY             *
+          * M.W.SCHMIDT, K.K.BALDRIDGE, J.A.BOATZ, S.T.ELBERT, *
+          *   M.S.GORDON, J.H.JENSEN, S.KOSEKI, N.MATSUNAGA,   *
+          *          K.A.NGUYEN, S.J.SU, T.L.WINDUS,           *
+          *       TOGETHER WITH M.DUPUIS, J.A.MONTGOMERY       *
+          *         J.COMPUT.CHEM.  14, 1347-1363(1993)        *
+          **************** 64 BIT LINUX VERSION ****************
+
+  SINCE 1993, STUDENTS AND POSTDOCS WORKING AT IOWA STATE UNIVERSITY
+  AND ALSO IN THEIR VARIOUS JOBS AFTER LEAVING ISU HAVE MADE IMPORTANT
+  CONTRIBUTIONS TO THE CODE:
+     IVANA ADAMOVIC, CHRISTINE AIKENS, YURI ALEXEEV, POOJA ARORA,
+     ANDREY ASADCHEV, ROB BELL, PRADIPTA BANDYOPADHYAY, JONATHAN BENTZ,
+     BRETT BODE, KURT BRORSEN, CALEB CARLIN, GALINA CHABAN, WEI CHEN,
+     CHEOL HO CHOI, PAUL DAY, ALBERT DEFUSCO, NUWAN DESILVA, TIM DUDLEY,
+     DMITRI FEDOROV, ALEX FINDLATER, GRAHAM FLETCHER, MARK FREITAG,
+     KURT GLAESEMANN, ANASTASIA GUNINA,
+     DAN KEMP, GRANT MERRILL, NORIYUKI MINEZAWA, JONATHAN MULLIN,
+     TAKESHI NAGATA, SEAN NEDD, HEATHER NETZLOFF, BOSILJKA NJEGIC, RYAN OLSON,
+     MIKE PAK, BUU PHAM,
+     SPENCER PRUITT, LUKE ROSKOP, JIM SHOEMAKER, LYUDMILA SLIPCHENKO,
+     TONY SMITH, SAROM SOK LEANG, JIE SONG, TETSUYA TAKETSUGU, SIMON WEBB,
+     PENG XU, SOOHAENG YOO, FEDERICO ZAHARIEV
+
+  ADDITIONAL CODE HAS BEEN PROVIDED BY COLLABORATORS IN OTHER GROUPS:
+     IOWA STATE UNIVERSITY:
+          JOE IVANIC, AARON WEST, LAIMUTIS BYTAUTAS, KLAUS RUEDENBERG
+     UNIVERSITY OF TOKYO: KIMIHIKO HIRAO, TAKAHITO NAKAJIMA,
+          TAKAO TSUNEDA, MUNEAKI KAMIYA, SUSUMU YANAGISAWA,
+          KIYOSHI YAGI, MAHITO CHIBA, SEIKEN TOKURA, NAOAKI KAWAKAMI
+     UNIVERSITY OF AARHUS: FRANK JENSEN
+     UNIVERSITY OF IOWA: VISVALDAS KAIRYS, HUI LI
+     NATIONAL INST. OF STANDARDS AND TECHNOLOGY: WALT STEVENS, DAVID GARMER
+     UNIVERSITY OF PISA: BENEDETTA MENNUCCI, JACOPO TOMASI
+     UNIVERSITY OF MEMPHIS: HENRY KURTZ, PRAKASHAN KORAMBATH
+     UNIVERSITY OF ALBERTA: TOBY ZENG, MARIUSZ KLOBUKOWSKI
+     UNIVERSITY OF NEW ENGLAND: MARK SPACKMAN
+     MIE UNIVERSITY: HIROAKI UMEDA
+     NAT. INST. OF ADVANCED INDUSTRIAL SCIENCE AND TECHNOLOGY: KAZUO KITAURA
+     MICHIGAN STATE UNIVERSITY:
+          KAROL KOWALSKI, MARTA WLOCH, JEFFREY GOUR, JESSE LUTZ,
+          WEI LI, JUN SHEN, J. EMILIANO DEUSTUA, PIOTR PIECUCH
+     UNIVERSITY OF MINNESOTA:
+          YINAN SHU
+     UNIVERSITY OF SILESIA: MONIKA MUSIAL, STANISLAW KUCHARSKI
+     FACULTES UNIVERSITAIRES NOTRE-DAME DE LA PAIX:
+          OLIVIER QUINET, BENOIT CHAMPAGNE
+     UNIVERSITY OF CALIFORNIA - SANTA BARBARA: BERNARD KIRTMAN
+     INSTITUTE FOR MOLECULAR SCIENCE:
+          KAZUYA ISHIMURA, MICHIO KATOUDA, AND SHIGERU NAGASE
+     UNIVERSITY OF NOTRE DAME: ANNA POMOGAEVA, DAN CHIPMAN
+     KYUSHU UNIVERSITY:
+          HARUYUKI NAKANO,
+          FENG LONG GU, JACEK KORCHOWIEC, MARCIN MAKOWSKI, AND YURIKO AOKI,
+          HIROTOSHI MORI AND EISAKU MIYOSHI
+     PENNSYLVANIA STATE UNIVERSITY:
+          TZVETELIN IORDANOV, CHET SWALINA, JONATHAN SKONE,
+          SHARON HAMMES-SCHIFFER
+     WASEDA UNIVERSITY:
+          MASATO KOBAYASHI, TOMOKO AKAMA, TSUGUKI TOUMA,
+          TAKESHI YOSHIKAWA, YASUHIRO IKABATA, JUNJI SEINO,
+          YUYA NAKAJIMA, HIROMI NAKAI
+     NANJING UNIVERSITY: SHUHUA LI
+     UNIVERSITY OF NEBRASKA:
+          PEIFENG SU, DEJUN SI, NANDUN THELLAMUREGE, YALI WANG, HUI LI
+     UNIVERSITY OF ZURICH: ROBERTO PEVERATI, KIM BALDRIDGE
+     N. COPERNICUS UNIVERSITY AND JACKSON STATE UNIVERSITY:
+          MARIA BARYSZ
+     UNIVERSITY OF COPENHAGEN: Jimmy Kromann, CASPER STEINMANN
+     TOKYO INSTITUTE OF TECHNOLOGY: HIROYA NAKATA
+     NAGOYA UNIVERSITY: YOSHIO NISHIMOTO, STEPHAN IRLE
+     MOSCOW STATE UNIVERSITY: VLADIMIR MIRONOV
+
+
+ PARALLEL VERSION RUNNING ON        8 PROCESSORS IN        1 NODES.
+
+ EXECUTION OF GAMESS BEGUN Sat Mar 16 14:09:23 2019
+
+            ECHO OF THE FIRST FEW INPUT CARDS -
+ INPUT CARD>!*** FMO 5.2 (Gamess) INPUT generated by Facio 21.1.1.32 ***                    
+ INPUT CARD> $CONTRL RUNTYP=OPTFMO NPRINT=-5 ISPHER=-1 MAXIT=50 $END                        
+ INPUT CARD> $SYSTEM MWORDS=29 $END                                                         
+ INPUT CARD> $GDDI NGROUP=1 $END                                                            
+ INPUT CARD> $INTGRL NINTIC=-9000000 $END                                                   
+ INPUT CARD> $SCF DIRSCF=.FALSE. NPUNCH=0 $END                                              
+ INPUT CARD>!*** NumCPU : 2  MemPerNode : 512MB                                             
+ INPUT CARD> $FMOPRP                                                                        
+ INPUT CARD>    NAODIR=210                                                                  
+ INPUT CARD>    NGRFMO(1)=1, 1, 0, 0, 0,   0, 0, 0, 0, 0                                    
+ INPUT CARD>    NPRINT=9                                                                    
+ INPUT CARD> $END                                                                           
+ INPUT CARD> $FMO                                                                           
+ INPUT CARD>      SCFTYP(1)=RHF                                                             
+ INPUT CARD>      MODGRD=10                                                                 
+ INPUT CARD>      MODMUL=0                                                                  
+ INPUT CARD>      MAXCAO=5                                                                  
+ INPUT CARD>      MAXBND=34                                                                 
+ INPUT CARD>      NLAYER=1                                                                  
+ INPUT CARD>      NFRAG=32                                                                  
+ INPUT CARD>      ICHARG(1)=-1, -1, -1, -1, -1, -1, -1, -1, -1, -1,                         
+ INPUT CARD>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1,                                         
+ INPUT CARD>-1, -1, -1, -1, -1, -1, -1, -1, -1, -1,                                         
+ INPUT CARD>-1, 0                                                                           
+ INPUT CARD>      FRGNAM(1)=Frag1, Frag2, Frag3, Frag4, Frag5, Frag6, Frag7, Frag8, Frag9, F
+ INPUT CARD>      indat(1)=0                                                                
+ INPUT CARD>               1   -36   0                                                      
+ INPUT CARD>               37   -69   0                                                     
+ INPUT CARD>               70   -103   0                                                    
+ INPUT CARD>               104   -134   0                                                   
+ INPUT CARD>               135   -167   0                                                   
+ INPUT CARD>               168   -201   0                                                   
+ INPUT CARD>               202   -231   0                                                   
+ INPUT CARD>               232   -261   0                                                   
+ INPUT CARD>               262   -292   0                                                   
+ INPUT CARD>               293   -323   0                                                   
+ INPUT CARD>               324   -354   0                                                   
+ INPUT CARD>               355   -385   0                                                   
+ INPUT CARD>               386   -415   0                                                   
+ INPUT CARD>               416   -449   0                                                   
+ INPUT CARD>               450   -480   0                                                   
+ INPUT CARD>               481   -513   0                                                   
+ INPUT CARD>               514   -543   0                                                   
+ INPUT CARD>               544   -576   0                                                   
+ INPUT CARD>               577   -609   0                                                   
+ INPUT CARD>               610   -643   0                                                   
+ INPUT CARD>               644   -677   0                                                   
+ INPUT CARD>               678   -710   0                                                   
+ INPUT CARD>               711   -740   0                                                   
+ INPUT CARD>               741   -774   0                                                   
+
+
+ -------------------------------------------------------------
+ GROUP DDI, PROGRAMMED BY: RYAN M. OLSON AND DMITRI G. FEDOROV
+        FEDOROV ET AL., J. COMPUT. CHEM., 25 (2004) 872.
+ -------------------------------------------------------------
+
+ -------------------------------------------------------
+ GDDI: INITIALIZATION COMPLETED FOR GROUP     1 OF     1
+ WITH     8 PROCESSES BALTYP=DLB   global rank=        0
+ -------------------------------------------------------
+
+   29000000 WORDS OF MEMORY AVAILABLE
+
+
+     RUN TITLE
+     ---------
+  FMO calculation : XXNAMEXX                                                     
+
+ THE POINT GROUP OF THE MOLECULE IS C1      
+ THE ORDER OF THE PRINCIPAL AXIS IS     0
+
+ ATOM   ATOMIC CHARGE
+ C.1-1       6.0
+ O.1-1       8.0
+ N.1-1       7.0
+ H.1-1       1.0
+ P.1-1      15.0
+
+     ATOMIC BASIS SET LIBRARY
+     ----------------
+ THE CONTRACTED PRIMITIVE FUNCTIONS HAVE BEEN UNNORMALIZED
+ THE CONTRACTED BASIS FUNCTIONS ARE NOW NORMALIZED TO UNITY
+
+  SHELL TYPE  PRIMITIVE        EXPONENT          CONTRACTION COEFFICIENT(S)
+
+ C.1-1     
+
+      1   S       1           172.2560000    0.061766907377
+      1   S       2            25.9109000    0.358794042852
+      1   S       3             5.5333500    0.700713083689
+
+      2   L       4             3.6649800   -0.395895162119    0.236459946619
+      2   L       5             0.7705450    1.215834355681    0.860618805716
+
+      3   L       6             0.1958570    1.000000000000    1.000000000000
+
+ O.1-1     
+
+      4   S       7           322.0370000    0.059239393389
+      4   S       8            48.4308000    0.351499960776
+      4   S       9            10.4206000    0.707657921031
+
+      5   L      10             7.4029400   -0.404453583190    0.244586106967
+      5   L      11             1.5762000    1.221561761397    0.853955373466
+
+      6   L      12             0.3736840    1.000000000000    1.000000000000
+
+ N.1-1     
+
+      7   S      13           242.7660000    0.059865700508
+      7   S      14            36.4851000    0.352955002994
+      7   S      15             7.8144900    0.706513005993
+
+      8   L      16             5.4252200   -0.413300077430    0.237972016222
+      8   L      17             1.1491500    1.224417266851    0.858953058551
+
+      9   L      18             0.2832050    1.000000000000    1.000000000000
+
+ H.1-1     
+
+     10   S      19             5.4471780    0.156284978695
+     10   S      20             0.8245472    0.904690876670
+
+     11   S      21             0.1831916    1.000000000000
+
+ P.1-1     
+
+     12   S      22          1054.9000000    0.065540713549
+     12   S      23           159.1950000    0.384036079392
+     12   S      24            34.5304000    0.674541139449
+
+     13   L      25            44.2866000   -0.102130053458    0.110851002536
+     13   L      26            10.1019000    0.081592242708    0.456495010442
+     13   L      27             2.7399700    0.969788507613    0.606936013883
+
+     14   L      28             1.2186500   -0.371496021877    0.091582310217
+     14   L      29             0.3955460    1.270993496131    0.934924104303
+
+     15   L      30             0.1228110    1.000000000000    1.000000000000
+
+ TOTAL NUMBER OF BASIS SET SHELLS             =   15
+ NUMBER OF CARTESIAN GAUSSIAN BASIS FUNCTIONS =   42
+
+     $CONTRL OPTIONS
+     ---------------
+ SCFTYP=RHF          RUNTYP=OPTFMO       EXETYP=RUN     
+ MPLEVL=       0     CITYP =NONE         CCTYP =NONE         VBTYP =NONE    
+ DFTTYP=NONE         TDDFT =NONE    
+ MULT  =       1     ICHARG=       0     NZVAR =       0     COORD =UNIQUE  
+ PP    =NONE         RELWFN=NONE         LOCAL =NONE         NUMGRD=       F
+ ISPHER=      -1     NOSYM =       0     MAXIT =      50     UNITS =ANGS    
+ PLTORB=       F     MOLPLT=       F     AIMPAC=       F     FRIEND=        
+ NPRINT=      -5     IREST =       0     GEOM  =INPUT   
+ NORMF =       0     NORMP =       0     ITOL  =      24     ICUT  =      12
+ INTTYP=BEST         GRDTYP=BEST         QMTTOL= 1.0E-06
+
+     $SYSTEM OPTIONS
+     ---------------
+  REPLICATED MEMORY=    29000000 WORDS (ON EVERY NODE).
+ DISTRIBUTED MEMDDI=           0 MILLION WORDS IN AGGREGATE,
+ MEMDDI DISTRIBUTED OVER   8 PROCESSORS IS           0 WORDS/PROCESSOR.
+ TOTAL MEMORY REQUESTED ON EACH PROCESSOR=    29000000 WORDS.
+ TIMLIM=      525600.00 MINUTES, OR     365.0 DAYS.
+ PARALL= T  BALTYP=  DLB     KDIAG=    0  COREFL= F
+ MXSEQ2=     300 MXSEQ3=     150  mem10=         0
+
+          ----------------
+          PROPERTIES INPUT
+          ----------------
+
+     MOMENTS            FIELD           POTENTIAL          DENSITY
+ IEMOM =       1   IEFLD =       0   IEPOT =       0   IEDEN =       0
+ WHERE =COMASS     WHERE =NUCLEI     WHERE =NUCLEI     WHERE =NUCLEI  
+ OUTPUT=BOTH       OUTPUT=BOTH       OUTPUT=NONE       OUTPUT=BOTH    
+ IEMINT=       0   IEFINT=       0                     IEDINT=       0
+                                                       MORB  =       0
+          EXTRAPOLATION IN EFFECT
+          SOSCF IN EFFECT
+ ORBITAL PRINTING OPTION: NPREO=     1 32767     2     1
+
+     -------------------------------
+     INTEGRAL TRANSFORMATION OPTIONS
+     -------------------------------
+     NWORD  =            0
+     CUTOFF = 1.0E-10     MPTRAN =       0
+     DIRTRF =       F     AOINTS =DUP     
+
+          ----------------------
+          INTEGRAL INPUT OPTIONS
+          ----------------------
+ NOPK  =       1 NORDER=       0 SCHWRZ=       T
+
+ ..... DONE SETTING UP THE RUN .....
+ CPU     0: STEP CPU TIME=     0.07 TOTAL CPU TIME=          0.1 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.1 SECONDS, CPU UTILIZATION IS   100.00%
+
+ ALLOCATED      9030000 WORDS FOR IN CORE 2E INTEGRALS.
+
+
+ """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+ FMO geometry optimisation driver:
+
+ Method=HSSUPD   UPDATE=BFGS       Hess=GUESS    LINSER=   0   NFRZ=     0
+   STEP=  0.7500 STPMIN=  0.0000 STPMAX=  1.0000 STPFAC=  1.0000
+
+ Using     28676 words of memory.
+ """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+ Using   590016 words of incore integral buffer to store inverse Hessian.
+
+ CPU     0: STEP CPU TIME=     0.01 TOTAL CPU TIME=          0.1 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.1 SECONDS, CPU UTILIZATION IS    72.73%
+
+                    ----------------------
+                    AO INTEGRAL TECHNOLOGY
+                    ----------------------
+     S,P,L SHELL ROTATED AXIS INTEGRALS, REPROGRAMMED BY
+        KAZUYA ISHIMURA (IMS) AND JOSE SIERRA (SYNSTAR).
+     S,P,D,L SHELL ROTATED AXIS INTEGRALS PROGRAMMED BY
+        KAZUYA ISHIMURA (INSTITUTE FOR MOLECULAR SCIENCE).
+     S,P,D,F,G SHELL TO TOTAL QUARTET ANGULAR MOMENTUM SUM 5,
+        ERIC PROGRAM BY GRAHAM FLETCHER (ELORET AND NASA ADVANCED
+        SUPERCOMPUTING DIVISION, AMES RESEARCH CENTER).
+     S,P,D,F,G,L SHELL GENERAL RYS QUADRATURE PROGRAMMED BY
+        MICHEL DUPUIS (PACIFIC NORTHWEST NATIONAL LABORATORY).
+ CPU     0: STEP CPU TIME=     0.04 TOTAL CPU TIME=          0.1 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.5 SECONDS, CPU UTILIZATION IS    24.00%
+ CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.1 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.5 SECONDS, CPU UTILIZATION IS    24.00%
+ Initialising fragments
+ CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.1 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.5 SECONDS, CPU UTILIZATION IS    24.00%
+ CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          0.1 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.5 SECONDS, CPU UTILIZATION IS    24.00%
+
+ -----------------------------------------------------------------------
+                  The Fragment Molecular Orbital (FMO) method.
+                       The program is developed at the
+                     Nanoscience Research Institute (NRI)
+     (formerly, Research Institute for Computational Sciences, RICS)
+ National Institute of Advanced Industrial Science and Technology (AIST)
+     AIST Tsukuba Central 2, Umezono 1-1-1, Tsukuba, 305-8568, Japan.
+
+                         Version 5.3
+                    coded by D. G. Fedorov and K. Kitaura,
+ with contributions from N. Asada, K.R. Brorsen, M. Chiba, C. Choi, N. Minezawa,
+ T. Nagata, H. Nakata, Y. Nishimoto, S.R. Pruitt, C. Steinmann, and F. Zahariev.
+       All publications using the FMO method in GAMESS should reference:
+          D. G. Fedorov, K. Kitaura, J. Chem. Phys. 120, 6832 (2004).
+ -----------------------------------------------------------------------
+
+ Used memory (words):      1729362
+ Number of fragments:     32
+ Number of layers:         1
+ N-body FMO method:        2
+ Number of atoms:       1024
+ Total charge:           -31
+ Total spin multiplicity:  1
+ Number of basis sets:     1
+ Number of LMO types:      2
+ Number of boundaries:    31
+ MonomerSCF convergence:   0.1000E-06
+ Max monomerSCF iter:     30
+ MonomerSCF criterion:     internal
+ Max AOs per n-mer:      253      495
+ Projection operator constant:  0.10E+07
+ Layer electron correlation information
+     nbody=  2
+    SCFTYP=RHF     
+    MPLEVL=  0
+    DFTTYP=NONE    
+     CITYP=NONE    
+     CCTYP=NONE    
+     TDDFT=NONE    
+ FMO method: FMO2-RHF
+
+ Bond fragmentation scheme: HOP
+
+ FMO approximations.
+    Using point charge approximation for the 2e ESP with the VdW factor   2.00
+    Using ES-dimer approximation with the VdW factor   2.00
+    The uniform distances will be used in ESPs.
+    Van der Waals radii in Angstrom are:
+       R(H  )=  1.2000
+       R(O  )=  1.4000
+       R(C  )=  1.5000
+       R(N  )=  1.5000
+       R(P  )=  1.8000
+    FMO gradient: add ESP derivative terms.
+    FMO gradient: add Mulliken charge derivative.
+    FMO gradient: add HOP derivatives.
+
+ FMO initial guess options.
+    Using monomer density to form dimer guess.
+
+ FMO extensions.
+
+ FMO automation options.
+
+ FMO SCF converger options.
+    SCF convergers:
+     65     65     65     65     65     65     65     65     65     65
+    Fragment densities will be exchanged.
+
+ FMO parallelisation options.
+    Smart parallel load balancing: large jobs first.
+    ESPs will be shell parallelised.
+    Broadcast all fragments at once.
+    Do the fragment initialisation in the reverse order.
+    Layer 1, monomer(SCF,MP2,MCSCF) groups are:    1    0    0
+    Layer 1,   dimer(SCF,ESD,MCSCF) groups are:    1    0    0
+
+ FMO properties and print-out level.
+    Interfragment CT method:    4
+       Compact print-out level.
+    Atomic charges will be printed.
+
+ Array dimensions maxbnd,maxknd,maxcbs,maxcao,maxbbd are:
+                      34     10     13      5     13
+
+ --------------------------------------------------
+
+
+
+
+ Starting layer 1 nbody=2
+ SCFTYP=RHF     MPLEVL=0 DFTTYP=NONE    CITYP=NONE    CCTYP=NONE    TDDFT=NONE    
+
+
+ CPU     0: STEP CPU TIME=     0.01 TOTAL CPU TIME=          0.1 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.5 SECONDS, CPU UTILIZATION IS    24.07%
+
+ Running initial guess for monomer      32
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    259752 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    59 ORBITALS ARE OCCUPIED (   16 CORE ORBITALS).
+    17=A       18=A       19=A       20=A       21=A       22=A       23=A   
+    24=A       25=A       26=A       27=A       28=A       29=A       30=A   
+    31=A       32=A       33=A       34=A       35=A       36=A       37=A   
+    38=A       39=A       40=A       41=A       42=A       43=A       44=A   
+    45=A       46=A       47=A       48=A       49=A       50=A       51=A   
+    52=A       53=A       54=A       55=A       56=A       57=A       58=A   
+    59=A       60=A       61=A       62=A       63=A       64=A       65=A   
+    66=A       67=A       68=A       69=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.05 TOTAL CPU TIME=          0.2 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.6 SECONDS, CPU UTILIZATION IS    30.00%
+
+ Running initial guess for monomer      31
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    405894 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    79 ORBITALS ARE OCCUPIED (   24 CORE ORBITALS).
+    25=A       26=A       27=A       28=A       29=A       30=A       31=A   
+    32=A       33=A       34=A       35=A       36=A       37=A       38=A   
+    39=A       40=A       41=A       42=A       43=A       44=A       45=A   
+    46=A       47=A       48=A       49=A       50=A       51=A       52=A   
+    53=A       54=A       55=A       56=A       57=A       58=A       59=A   
+    60=A       61=A       62=A       63=A       64=A       65=A       66=A   
+    67=A       68=A       69=A       70=A       71=A       72=A       73=A   
+    74=A       75=A       76=A       77=A       78=A       79=A       80=A   
+    81=A       82=A       83=A       84=A       85=A       86=A       87=A   
+    88=A       89=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.06 TOTAL CPU TIME=          0.2 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.7 SECONDS, CPU UTILIZATION IS    33.80%
+
+ Running initial guess for monomer      30
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    405894 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    79 ORBITALS ARE OCCUPIED (   24 CORE ORBITALS).
+    25=A       26=A       27=A       28=A       29=A       30=A       31=A   
+    32=A       33=A       34=A       35=A       36=A       37=A       38=A   
+    39=A       40=A       41=A       42=A       43=A       44=A       45=A   
+    46=A       47=A       48=A       49=A       50=A       51=A       52=A   
+    53=A       54=A       55=A       56=A       57=A       58=A       59=A   
+    60=A       61=A       62=A       63=A       64=A       65=A       66=A   
+    67=A       68=A       69=A       70=A       71=A       72=A       73=A   
+    74=A       75=A       76=A       77=A       78=A       79=A       80=A   
+    81=A       82=A       83=A       84=A       85=A       86=A       87=A   
+    88=A       89=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.06 TOTAL CPU TIME=          0.3 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.8 SECONDS, CPU UTILIZATION IS    36.14%
+
+ Running initial guess for monomer      29
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    520404 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    89 ORBITALS ARE OCCUPIED (   27 CORE ORBITALS).
+    28=A       29=A       30=A       31=A       32=A       33=A       34=A   
+    35=A       36=A       37=A       38=A       39=A       40=A       41=A   
+    42=A       43=A       44=A       45=A       46=A       47=A       48=A   
+    49=A       50=A       51=A       52=A       53=A       54=A       55=A   
+    56=A       57=A       58=A       59=A       60=A       61=A       62=A   
+    63=A       64=A       65=A       66=A       67=A       68=A       69=A   
+    70=A       71=A       72=A       73=A       74=A       75=A       76=A   
+    77=A       78=A       79=A       80=A       81=A       82=A       83=A   
+    84=A       85=A       86=A       87=A       88=A       89=A       90=A   
+    91=A       92=A       93=A       94=A       95=A       96=A       97=A   
+    98=A       99=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.07 TOTAL CPU TIME=          0.4 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          0.9 SECONDS, CPU UTILIZATION IS    38.95%
+
+ Running initial guess for monomer      28
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    413697 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    79 ORBITALS ARE OCCUPIED (   24 CORE ORBITALS).
+    25=A       26=A       27=A       28=A       29=A       30=A       31=A   
+    32=A       33=A       34=A       35=A       36=A       37=A       38=A   
+    39=A       40=A       41=A       42=A       43=A       44=A       45=A   
+    46=A       47=A       48=A       49=A       50=A       51=A       52=A   
+    53=A       54=A       55=A       56=A       57=A       58=A       59=A   
+    60=A       61=A       62=A       63=A       64=A       65=A       66=A   
+    67=A       68=A       69=A       70=A       71=A       72=A       73=A   
+    74=A       75=A       76=A       77=A       78=A       79=A       80=A   
+    81=A       82=A       83=A       84=A       85=A       86=A       87=A   
+    88=A       89=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.05 TOTAL CPU TIME=          0.4 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          1.1 SECONDS, CPU UTILIZATION IS    39.25%
+
+ Running initial guess for monomer      27
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    413697 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    79 ORBITALS ARE OCCUPIED (   24 CORE ORBITALS).
+    25=A       26=A       27=A       28=A       29=A       30=A       31=A   
+    32=A       33=A       34=A       35=A       36=A       37=A       38=A   
+    39=A       40=A       41=A       42=A       43=A       44=A       45=A   
+    46=A       47=A       48=A       49=A       50=A       51=A       52=A   
+    53=A       54=A       55=A       56=A       57=A       58=A       59=A   
+    60=A       61=A       62=A       63=A       64=A       65=A       66=A   
+    67=A       68=A       69=A       70=A       71=A       72=A       73=A   
+    74=A       75=A       76=A       77=A       78=A       79=A       80=A   
+    81=A       82=A       83=A       84=A       85=A       86=A       87=A   
+    88=A       89=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.06 TOTAL CPU TIME=          0.5 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          1.2 SECONDS, CPU UTILIZATION IS    41.03%
+
+ Running initial guess for monomer      26
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    483461 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    85 ORBITALS ARE OCCUPIED (   26 CORE ORBITALS).
+    27=A       28=A       29=A       30=A       31=A       32=A       33=A   
+    34=A       35=A       36=A       37=A       38=A       39=A       40=A   
+    41=A       42=A       43=A       44=A       45=A       46=A       47=A   
+    48=A       49=A       50=A       51=A       52=A       53=A       54=A   
+    55=A       56=A       57=A       58=A       59=A       60=A       61=A   
+    62=A       63=A       64=A       65=A       66=A       67=A       68=A   
+    69=A       70=A       71=A       72=A       73=A       74=A       75=A   
+    76=A       77=A       78=A       79=A       80=A       81=A       82=A   
+    83=A       84=A       85=A       86=A       87=A       88=A       89=A   
+    90=A       91=A       92=A       93=A       94=A       95=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.07 TOTAL CPU TIME=          0.6 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          1.3 SECONDS, CPU UTILIZATION IS    42.64%
+
+ Running initial guess for monomer      25
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    483461 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    85 ORBITALS ARE OCCUPIED (   26 CORE ORBITALS).
+    27=A       28=A       29=A       30=A       31=A       32=A       33=A   
+    34=A       35=A       36=A       37=A       38=A       39=A       40=A   
+    41=A       42=A       43=A       44=A       45=A       46=A       47=A   
+    48=A       49=A       50=A       51=A       52=A       53=A       54=A   
+    55=A       56=A       57=A       58=A       59=A       60=A       61=A   
+    62=A       63=A       64=A       65=A       66=A       67=A       68=A   
+    69=A       70=A       71=A       72=A       73=A       74=A       75=A   
+    76=A       77=A       78=A       79=A       80=A       81=A       82=A   
+    83=A       84=A       85=A       86=A       87=A       88=A       89=A   
+    90=A       91=A       92=A       93=A       94=A       95=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.07 TOTAL CPU TIME=          0.6 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          1.4 SECONDS, CPU UTILIZATION IS    43.66%
+
+ Running initial guess for monomer      24
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    520404 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    89 ORBITALS ARE OCCUPIED (   27 CORE ORBITALS).
+    28=A       29=A       30=A       31=A       32=A       33=A       34=A   
+    35=A       36=A       37=A       38=A       39=A       40=A       41=A   
+    42=A       43=A       44=A       45=A       46=A       47=A       48=A   
+    49=A       50=A       51=A       52=A       53=A       54=A       55=A   
+    56=A       57=A       58=A       59=A       60=A       61=A       62=A   
+    63=A       64=A       65=A       66=A       67=A       68=A       69=A   
+    70=A       71=A       72=A       73=A       74=A       75=A       76=A   
+    77=A       78=A       79=A       80=A       81=A       82=A       83=A   
+    84=A       85=A       86=A       87=A       88=A       89=A       90=A   
+    91=A       92=A       93=A       94=A       95=A       96=A       97=A   
+    98=A       99=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.09 TOTAL CPU TIME=          0.7 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          1.6 SECONDS, CPU UTILIZATION IS    44.65%
+
+ Running initial guess for monomer      23
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    405894 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    79 ORBITALS ARE OCCUPIED (   24 CORE ORBITALS).
+    25=A       26=A       27=A       28=A       29=A       30=A       31=A   
+    32=A       33=A       34=A       35=A       36=A       37=A       38=A   
+    39=A       40=A       41=A       42=A       43=A       44=A       45=A   
+    46=A       47=A       48=A       49=A       50=A       51=A       52=A   
+    53=A       54=A       55=A       56=A       57=A       58=A       59=A   
+    60=A       61=A       62=A       63=A       64=A       65=A       66=A   
+    67=A       68=A       69=A       70=A       71=A       72=A       73=A   
+    74=A       75=A       76=A       77=A       78=A       79=A       80=A   
+    81=A       82=A       83=A       84=A       85=A       86=A       87=A   
+    88=A       89=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.05 TOTAL CPU TIME=          0.8 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          1.7 SECONDS, CPU UTILIZATION IS    43.68%
+
+ Running initial guess for monomer      22
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    483461 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    85 ORBITALS ARE OCCUPIED (   26 CORE ORBITALS).
+    27=A       28=A       29=A       30=A       31=A       32=A       33=A   
+    34=A       35=A       36=A       37=A       38=A       39=A       40=A   
+    41=A       42=A       43=A       44=A       45=A       46=A       47=A   
+    48=A       49=A       50=A       51=A       52=A       53=A       54=A   
+    55=A       56=A       57=A       58=A       59=A       60=A       61=A   
+    62=A       63=A       64=A       65=A       66=A       67=A       68=A   
+    69=A       70=A       71=A       72=A       73=A       74=A       75=A   
+    76=A       77=A       78=A       79=A       80=A       81=A       82=A   
+    83=A       84=A       85=A       86=A       87=A       88=A       89=A   
+    90=A       91=A       92=A       93=A       94=A       95=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.07 TOTAL CPU TIME=          0.8 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          1.9 SECONDS, CPU UTILIZATION IS    43.68%
+
+ Running initial guess for monomer      21
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    520404 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    89 ORBITALS ARE OCCUPIED (   27 CORE ORBITALS).
+    28=A       29=A       30=A       31=A       32=A       33=A       34=A   
+    35=A       36=A       37=A       38=A       39=A       40=A       41=A   
+    42=A       43=A       44=A       45=A       46=A       47=A       48=A   
+    49=A       50=A       51=A       52=A       53=A       54=A       55=A   
+    56=A       57=A       58=A       59=A       60=A       61=A       62=A   
+    63=A       64=A       65=A       66=A       67=A       68=A       69=A   
+    70=A       71=A       72=A       73=A       74=A       75=A       76=A   
+    77=A       78=A       79=A       80=A       81=A       82=A       83=A   
+    84=A       85=A       86=A       87=A       88=A       89=A       90=A   
+    91=A       92=A       93=A       94=A       95=A       96=A       97=A   
+    98=A       99=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.08 TOTAL CPU TIME=          0.9 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          2.1 SECONDS, CPU UTILIZATION IS    43.75%
+
+ Running initial guess for monomer      20
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    520404 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    89 ORBITALS ARE OCCUPIED (   27 CORE ORBITALS).
+    28=A       29=A       30=A       31=A       32=A       33=A       34=A   
+    35=A       36=A       37=A       38=A       39=A       40=A       41=A   
+    42=A       43=A       44=A       45=A       46=A       47=A       48=A   
+    49=A       50=A       51=A       52=A       53=A       54=A       55=A   
+    56=A       57=A       58=A       59=A       60=A       61=A       62=A   
+    63=A       64=A       65=A       66=A       67=A       68=A       69=A   
+    70=A       71=A       72=A       73=A       74=A       75=A       76=A   
+    77=A       78=A       79=A       80=A       81=A       82=A       83=A   
+    84=A       85=A       86=A       87=A       88=A       89=A       90=A   
+    91=A       92=A       93=A       94=A       95=A       96=A       97=A   
+    98=A       99=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.08 TOTAL CPU TIME=          1.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          2.3 SECONDS, CPU UTILIZATION IS    43.81%
+
+ Running initial guess for monomer      19
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    483461 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    85 ORBITALS ARE OCCUPIED (   26 CORE ORBITALS).
+    27=A       28=A       29=A       30=A       31=A       32=A       33=A   
+    34=A       35=A       36=A       37=A       38=A       39=A       40=A   
+    41=A       42=A       43=A       44=A       45=A       46=A       47=A   
+    48=A       49=A       50=A       51=A       52=A       53=A       54=A   
+    55=A       56=A       57=A       58=A       59=A       60=A       61=A   
+    62=A       63=A       64=A       65=A       66=A       67=A       68=A   
+    69=A       70=A       71=A       72=A       73=A       74=A       75=A   
+    76=A       77=A       78=A       79=A       80=A       81=A       82=A   
+    83=A       84=A       85=A       86=A       87=A       88=A       89=A   
+    90=A       91=A       92=A       93=A       94=A       95=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.07 TOTAL CPU TIME=          1.1 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          2.4 SECONDS, CPU UTILIZATION IS    43.62%
+
+ Running initial guess for monomer      18
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    483461 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    85 ORBITALS ARE OCCUPIED (   26 CORE ORBITALS).
+    27=A       28=A       29=A       30=A       31=A       32=A       33=A   
+    34=A       35=A       36=A       37=A       38=A       39=A       40=A   
+    41=A       42=A       43=A       44=A       45=A       46=A       47=A   
+    48=A       49=A       50=A       51=A       52=A       53=A       54=A   
+    55=A       56=A       57=A       58=A       59=A       60=A       61=A   
+    62=A       63=A       64=A       65=A       66=A       67=A       68=A   
+    69=A       70=A       71=A       72=A       73=A       74=A       75=A   
+    76=A       77=A       78=A       79=A       80=A       81=A       82=A   
+    83=A       84=A       85=A       86=A       87=A       88=A       89=A   
+    90=A       91=A       92=A       93=A       94=A       95=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.07 TOTAL CPU TIME=          1.1 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          2.6 SECONDS, CPU UTILIZATION IS    43.97%
+
+ Running initial guess for monomer      17
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    405894 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    79 ORBITALS ARE OCCUPIED (   24 CORE ORBITALS).
+    25=A       26=A       27=A       28=A       29=A       30=A       31=A   
+    32=A       33=A       34=A       35=A       36=A       37=A       38=A   
+    39=A       40=A       41=A       42=A       43=A       44=A       45=A   
+    46=A       47=A       48=A       49=A       50=A       51=A       52=A   
+    53=A       54=A       55=A       56=A       57=A       58=A       59=A   
+    60=A       61=A       62=A       63=A       64=A       65=A       66=A   
+    67=A       68=A       69=A       70=A       71=A       72=A       73=A   
+    74=A       75=A       76=A       77=A       78=A       79=A       80=A   
+    81=A       82=A       83=A       84=A       85=A       86=A       87=A   
+    88=A       89=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.06 TOTAL CPU TIME=          1.2 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          2.7 SECONDS, CPU UTILIZATION IS    43.91%
+
+ Running initial guess for monomer      16
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    483461 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    85 ORBITALS ARE OCCUPIED (   26 CORE ORBITALS).
+    27=A       28=A       29=A       30=A       31=A       32=A       33=A   
+    34=A       35=A       36=A       37=A       38=A       39=A       40=A   
+    41=A       42=A       43=A       44=A       45=A       46=A       47=A   
+    48=A       49=A       50=A       51=A       52=A       53=A       54=A   
+    55=A       56=A       57=A       58=A       59=A       60=A       61=A   
+    62=A       63=A       64=A       65=A       66=A       67=A       68=A   
+    69=A       70=A       71=A       72=A       73=A       74=A       75=A   
+    76=A       77=A       78=A       79=A       80=A       81=A       82=A   
+    83=A       84=A       85=A       86=A       87=A       88=A       89=A   
+    90=A       91=A       92=A       93=A       94=A       95=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.07 TOTAL CPU TIME=          1.3 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          2.9 SECONDS, CPU UTILIZATION IS    43.90%
+
+ Running initial guess for monomer      15
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    413697 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    79 ORBITALS ARE OCCUPIED (   24 CORE ORBITALS).
+    25=A       26=A       27=A       28=A       29=A       30=A       31=A   
+    32=A       33=A       34=A       35=A       36=A       37=A       38=A   
+    39=A       40=A       41=A       42=A       43=A       44=A       45=A   
+    46=A       47=A       48=A       49=A       50=A       51=A       52=A   
+    53=A       54=A       55=A       56=A       57=A       58=A       59=A   
+    60=A       61=A       62=A       63=A       64=A       65=A       66=A   
+    67=A       68=A       69=A       70=A       71=A       72=A       73=A   
+    74=A       75=A       76=A       77=A       78=A       79=A       80=A   
+    81=A       82=A       83=A       84=A       85=A       86=A       87=A   
+    88=A       89=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.07 TOTAL CPU TIME=          1.3 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          3.0 SECONDS, CPU UTILIZATION IS    44.04%
+
+ Running initial guess for monomer      14
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    520404 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    89 ORBITALS ARE OCCUPIED (   27 CORE ORBITALS).
+    28=A       29=A       30=A       31=A       32=A       33=A       34=A   
+    35=A       36=A       37=A       38=A       39=A       40=A       41=A   
+    42=A       43=A       44=A       45=A       46=A       47=A       48=A   
+    49=A       50=A       51=A       52=A       53=A       54=A       55=A   
+    56=A       57=A       58=A       59=A       60=A       61=A       62=A   
+    63=A       64=A       65=A       66=A       67=A       68=A       69=A   
+    70=A       71=A       72=A       73=A       74=A       75=A       76=A   
+    77=A       78=A       79=A       80=A       81=A       82=A       83=A   
+    84=A       85=A       86=A       87=A       88=A       89=A       90=A   
+    91=A       92=A       93=A       94=A       95=A       96=A       97=A   
+    98=A       99=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.07 TOTAL CPU TIME=          1.4 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          3.2 SECONDS, CPU UTILIZATION IS    44.03%
+
+ Running initial guess for monomer      13
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    405894 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    79 ORBITALS ARE OCCUPIED (   24 CORE ORBITALS).
+    25=A       26=A       27=A       28=A       29=A       30=A       31=A   
+    32=A       33=A       34=A       35=A       36=A       37=A       38=A   
+    39=A       40=A       41=A       42=A       43=A       44=A       45=A   
+    46=A       47=A       48=A       49=A       50=A       51=A       52=A   
+    53=A       54=A       55=A       56=A       57=A       58=A       59=A   
+    60=A       61=A       62=A       63=A       64=A       65=A       66=A   
+    67=A       68=A       69=A       70=A       71=A       72=A       73=A   
+    74=A       75=A       76=A       77=A       78=A       79=A       80=A   
+    81=A       82=A       83=A       84=A       85=A       86=A       87=A   
+    88=A       89=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.06 TOTAL CPU TIME=          1.5 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          3.3 SECONDS, CPU UTILIZATION IS    43.84%
+
+ Running initial guess for monomer      12
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    413697 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    79 ORBITALS ARE OCCUPIED (   24 CORE ORBITALS).
+    25=A       26=A       27=A       28=A       29=A       30=A       31=A   
+    32=A       33=A       34=A       35=A       36=A       37=A       38=A   
+    39=A       40=A       41=A       42=A       43=A       44=A       45=A   
+    46=A       47=A       48=A       49=A       50=A       51=A       52=A   
+    53=A       54=A       55=A       56=A       57=A       58=A       59=A   
+    60=A       61=A       62=A       63=A       64=A       65=A       66=A   
+    67=A       68=A       69=A       70=A       71=A       72=A       73=A   
+    74=A       75=A       76=A       77=A       78=A       79=A       80=A   
+    81=A       82=A       83=A       84=A       85=A       86=A       87=A   
+    88=A       89=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.06 TOTAL CPU TIME=          1.5 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          3.5 SECONDS, CPU UTILIZATION IS    43.93%
+
+ Running initial guess for monomer      11
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    413697 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    79 ORBITALS ARE OCCUPIED (   24 CORE ORBITALS).
+    25=A       26=A       27=A       28=A       29=A       30=A       31=A   
+    32=A       33=A       34=A       35=A       36=A       37=A       38=A   
+    39=A       40=A       41=A       42=A       43=A       44=A       45=A   
+    46=A       47=A       48=A       49=A       50=A       51=A       52=A   
+    53=A       54=A       55=A       56=A       57=A       58=A       59=A   
+    60=A       61=A       62=A       63=A       64=A       65=A       66=A   
+    67=A       68=A       69=A       70=A       71=A       72=A       73=A   
+    74=A       75=A       76=A       77=A       78=A       79=A       80=A   
+    81=A       82=A       83=A       84=A       85=A       86=A       87=A   
+    88=A       89=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.06 TOTAL CPU TIME=          1.6 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          3.6 SECONDS, CPU UTILIZATION IS    43.89%
+
+ Running initial guess for monomer      10
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    413697 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    79 ORBITALS ARE OCCUPIED (   24 CORE ORBITALS).
+    25=A       26=A       27=A       28=A       29=A       30=A       31=A   
+    32=A       33=A       34=A       35=A       36=A       37=A       38=A   
+    39=A       40=A       41=A       42=A       43=A       44=A       45=A   
+    46=A       47=A       48=A       49=A       50=A       51=A       52=A   
+    53=A       54=A       55=A       56=A       57=A       58=A       59=A   
+    60=A       61=A       62=A       63=A       64=A       65=A       66=A   
+    67=A       68=A       69=A       70=A       71=A       72=A       73=A   
+    74=A       75=A       76=A       77=A       78=A       79=A       80=A   
+    81=A       82=A       83=A       84=A       85=A       86=A       87=A   
+    88=A       89=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.05 TOTAL CPU TIME=          1.6 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          3.7 SECONDS, CPU UTILIZATION IS    43.70%
+
+ Running initial guess for monomer       9
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    413697 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    79 ORBITALS ARE OCCUPIED (   24 CORE ORBITALS).
+    25=A       26=A       27=A       28=A       29=A       30=A       31=A   
+    32=A       33=A       34=A       35=A       36=A       37=A       38=A   
+    39=A       40=A       41=A       42=A       43=A       44=A       45=A   
+    46=A       47=A       48=A       49=A       50=A       51=A       52=A   
+    53=A       54=A       55=A       56=A       57=A       58=A       59=A   
+    60=A       61=A       62=A       63=A       64=A       65=A       66=A   
+    67=A       68=A       69=A       70=A       71=A       72=A       73=A   
+    74=A       75=A       76=A       77=A       78=A       79=A       80=A   
+    81=A       82=A       83=A       84=A       85=A       86=A       87=A   
+    88=A       89=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.06 TOTAL CPU TIME=          1.7 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          3.9 SECONDS, CPU UTILIZATION IS    43.56%
+
+ Running initial guess for monomer       8
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    405894 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    79 ORBITALS ARE OCCUPIED (   24 CORE ORBITALS).
+    25=A       26=A       27=A       28=A       29=A       30=A       31=A   
+    32=A       33=A       34=A       35=A       36=A       37=A       38=A   
+    39=A       40=A       41=A       42=A       43=A       44=A       45=A   
+    46=A       47=A       48=A       49=A       50=A       51=A       52=A   
+    53=A       54=A       55=A       56=A       57=A       58=A       59=A   
+    60=A       61=A       62=A       63=A       64=A       65=A       66=A   
+    67=A       68=A       69=A       70=A       71=A       72=A       73=A   
+    74=A       75=A       76=A       77=A       78=A       79=A       80=A   
+    81=A       82=A       83=A       84=A       85=A       86=A       87=A   
+    88=A       89=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.06 TOTAL CPU TIME=          1.8 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          4.0 SECONDS, CPU UTILIZATION IS    43.53%
+
+ Running initial guess for monomer       7
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    405894 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    79 ORBITALS ARE OCCUPIED (   24 CORE ORBITALS).
+    25=A       26=A       27=A       28=A       29=A       30=A       31=A   
+    32=A       33=A       34=A       35=A       36=A       37=A       38=A   
+    39=A       40=A       41=A       42=A       43=A       44=A       45=A   
+    46=A       47=A       48=A       49=A       50=A       51=A       52=A   
+    53=A       54=A       55=A       56=A       57=A       58=A       59=A   
+    60=A       61=A       62=A       63=A       64=A       65=A       66=A   
+    67=A       68=A       69=A       70=A       71=A       72=A       73=A   
+    74=A       75=A       76=A       77=A       78=A       79=A       80=A   
+    81=A       82=A       83=A       84=A       85=A       86=A       87=A   
+    88=A       89=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.06 TOTAL CPU TIME=          1.8 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          4.2 SECONDS, CPU UTILIZATION IS    43.61%
+
+ Running initial guess for monomer       6
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    520404 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    89 ORBITALS ARE OCCUPIED (   27 CORE ORBITALS).
+    28=A       29=A       30=A       31=A       32=A       33=A       34=A   
+    35=A       36=A       37=A       38=A       39=A       40=A       41=A   
+    42=A       43=A       44=A       45=A       46=A       47=A       48=A   
+    49=A       50=A       51=A       52=A       53=A       54=A       55=A   
+    56=A       57=A       58=A       59=A       60=A       61=A       62=A   
+    63=A       64=A       65=A       66=A       67=A       68=A       69=A   
+    70=A       71=A       72=A       73=A       74=A       75=A       76=A   
+    77=A       78=A       79=A       80=A       81=A       82=A       83=A   
+    84=A       85=A       86=A       87=A       88=A       89=A       90=A   
+    91=A       92=A       93=A       94=A       95=A       96=A       97=A   
+    98=A       99=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.07 TOTAL CPU TIME=          1.9 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          4.3 SECONDS, CPU UTILIZATION IS    43.72%
+
+ Running initial guess for monomer       5
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    483461 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    85 ORBITALS ARE OCCUPIED (   26 CORE ORBITALS).
+    27=A       28=A       29=A       30=A       31=A       32=A       33=A   
+    34=A       35=A       36=A       37=A       38=A       39=A       40=A   
+    41=A       42=A       43=A       44=A       45=A       46=A       47=A   
+    48=A       49=A       50=A       51=A       52=A       53=A       54=A   
+    55=A       56=A       57=A       58=A       59=A       60=A       61=A   
+    62=A       63=A       64=A       65=A       66=A       67=A       68=A   
+    69=A       70=A       71=A       72=A       73=A       74=A       75=A   
+    76=A       77=A       78=A       79=A       80=A       81=A       82=A   
+    83=A       84=A       85=A       86=A       87=A       88=A       89=A   
+    90=A       91=A       92=A       93=A       94=A       95=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.07 TOTAL CPU TIME=          1.9 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          4.5 SECONDS, CPU UTILIZATION IS    43.62%
+
+ Running initial guess for monomer       4
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    413697 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    79 ORBITALS ARE OCCUPIED (   24 CORE ORBITALS).
+    25=A       26=A       27=A       28=A       29=A       30=A       31=A   
+    32=A       33=A       34=A       35=A       36=A       37=A       38=A   
+    39=A       40=A       41=A       42=A       43=A       44=A       45=A   
+    46=A       47=A       48=A       49=A       50=A       51=A       52=A   
+    53=A       54=A       55=A       56=A       57=A       58=A       59=A   
+    60=A       61=A       62=A       63=A       64=A       65=A       66=A   
+    67=A       68=A       69=A       70=A       71=A       72=A       73=A   
+    74=A       75=A       76=A       77=A       78=A       79=A       80=A   
+    81=A       82=A       83=A       84=A       85=A       86=A       87=A   
+    88=A       89=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.07 TOTAL CPU TIME=          2.0 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          4.6 SECONDS, CPU UTILIZATION IS    43.91%
+
+ Running initial guess for monomer       3
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    520404 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    89 ORBITALS ARE OCCUPIED (   27 CORE ORBITALS).
+    28=A       29=A       30=A       31=A       32=A       33=A       34=A   
+    35=A       36=A       37=A       38=A       39=A       40=A       41=A   
+    42=A       43=A       44=A       45=A       46=A       47=A       48=A   
+    49=A       50=A       51=A       52=A       53=A       54=A       55=A   
+    56=A       57=A       58=A       59=A       60=A       61=A       62=A   
+    63=A       64=A       65=A       66=A       67=A       68=A       69=A   
+    70=A       71=A       72=A       73=A       74=A       75=A       76=A   
+    77=A       78=A       79=A       80=A       81=A       82=A       83=A   
+    84=A       85=A       86=A       87=A       88=A       89=A       90=A   
+    91=A       92=A       93=A       94=A       95=A       96=A       97=A   
+    98=A       99=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.07 TOTAL CPU TIME=          2.1 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          4.8 SECONDS, CPU UTILIZATION IS    43.82%
+
+ Running initial guess for monomer       2
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    483461 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    85 ORBITALS ARE OCCUPIED (   26 CORE ORBITALS).
+    27=A       28=A       29=A       30=A       31=A       32=A       33=A   
+    34=A       35=A       36=A       37=A       38=A       39=A       40=A   
+    41=A       42=A       43=A       44=A       45=A       46=A       47=A   
+    48=A       49=A       50=A       51=A       52=A       53=A       54=A   
+    55=A       56=A       57=A       58=A       59=A       60=A       61=A   
+    62=A       63=A       64=A       65=A       66=A       67=A       68=A   
+    69=A       70=A       71=A       72=A       73=A       74=A       75=A   
+    76=A       77=A       78=A       79=A       80=A       81=A       82=A   
+    83=A       84=A       85=A       86=A       87=A       88=A       89=A   
+    90=A       91=A       92=A       93=A       94=A       95=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.08 TOTAL CPU TIME=          2.2 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          4.9 SECONDS, CPU UTILIZATION IS    44.02%
+
+ Running initial guess for monomer       1
+
+
+          -------------
+          GUESS OPTIONS
+          -------------
+          GUESS =HUCKEL            NORB  =       0          NORDER=       0
+          MIX   =       F          PRTMO =       F          PUNMO =       F
+          TOLZ  = 1.0E-08          TOLE  = 1.0E-05
+          SYMDEN=       F          PURIFY=       F
+
+ INITIAL GUESS ORBITALS GENERATED BY HUCKEL   ROUTINE.
+ HUCKEL GUESS REQUIRES    567794 WORDS.
+
+ SYMMETRIES FOR INITIAL GUESS ORBITALS FOLLOW.   BOTH SET(S).
+    94 ORBITALS ARE OCCUPIED (   28 CORE ORBITALS).
+    29=A       30=A       31=A       32=A       33=A       34=A       35=A   
+    36=A       37=A       38=A       39=A       40=A       41=A       42=A   
+    43=A       44=A       45=A       46=A       47=A       48=A       49=A   
+    50=A       51=A       52=A       53=A       54=A       55=A       56=A   
+    57=A       58=A       59=A       60=A       61=A       62=A       63=A   
+    64=A       65=A       66=A       67=A       68=A       69=A       70=A   
+    71=A       72=A       73=A       74=A       75=A       76=A       77=A   
+    78=A       79=A       80=A       81=A       82=A       83=A       84=A   
+    85=A       86=A       87=A       88=A       89=A       90=A       91=A   
+    92=A       93=A       94=A       95=A       96=A       97=A       98=A   
+    99=A      100=A      101=A      102=A      103=A      104=A   
+ ...... END OF INITIAL ORBITAL SELECTION ......
+ CPU     0: STEP CPU TIME=     0.08 TOTAL CPU TIME=          2.2 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          5.1 SECONDS, CPU UTILIZATION IS    43.95%
+
+ There are         410 separated and      86 SCF (       0 of them correlated) dimers.
+ Estimate of max dimer size:  486 AOs,  178 occ. MOs
+
+ Fragment statistics
+
+      I  NAME     Q NAT0 NATB NA  NAO LAY MUL SCFTYP        NOP     MOL    CONV
+ ==============================================================================
+      1 FRAG1    -1   36   1   94  253 1  1 G RHF             0      -1      -1
+      2 FRAG2    -1   33   1   85  233 1  1 G RHF             0      -1      -1
+      3 FRAG3    -1   34   1   89  242 1  1 G RHF             0      -1      -1
+      4 FRAG4    -1   31   1   79  215 1  1 G RHF             0      -1      -1
+      5 FRAG5    -1   33   1   85  233 1  1 G RHF             0      -1      -1
+      6 FRAG6    -1   34   1   89  242 1  1 G RHF             0      -1      -1
+      7 FRAG7    -1   30   1   79  213 1  1 G RHF             0      -1      -1
+      8 FRAG8    -1   30   1   79  213 1  1 G RHF             0      -1      -1
+      9 FRAG9    -1   31   1   79  215 1  1 G RHF             0      -1      -1
+     10 F        -1   31   1   79  215 1  1 G RHF             0      -1      -1
+     11 frg00011 -1   31   1   79  215 1  1 G RHF             0      -1      -1
+     12 frg00012 -1   31   1   79  215 1  1 G RHF             0      -1      -1
+     13 frg00013 -1   30   1   79  213 1  1 G RHF             0      -1      -1
+     14 frg00014 -1   34   1   89  242 1  1 G RHF             0      -1      -1
+     15 frg00015 -1   31   1   79  215 1  1 G RHF             0      -1      -1
+     16 frg00016 -1   33   1   85  233 1  1 G RHF             0      -1      -1
+     17 frg00017 -1   30   1   79  213 1  1 G RHF             0      -1      -1
+     18 frg00018 -1   33   1   85  233 1  1 G RHF             0      -1      -1
+     19 frg00019 -1   33   1   85  233 1  1 G RHF             0      -1      -1
+     20 frg00020 -1   34   1   89  242 1  1 G RHF             0      -1      -1
+     21 frg00021 -1   34   1   89  242 1  1 G RHF             0      -1      -1
+     22 frg00022 -1   33   1   85  233 1  1 G RHF             0      -1      -1
+     23 frg00023 -1   30   1   79  213 1  1 G RHF             0      -1      -1
+     24 frg00024 -1   34   1   89  242 1  1 G RHF             0      -1      -1
+     25 frg00025 -1   33   1   85  233 1  1 G RHF             0      -1      -1
+     26 frg00026 -1   33   1   85  233 1  1 G RHF             0      -1      -1
+     27 frg00027 -1   31   1   79  215 1  1 G RHF             0      -1      -1
+     28 frg00028 -1   31   1   79  215 1  1 G RHF             0      -1      -1
+     29 frg00029 -1   34   1   89  242 1  1 G RHF             0      -1      -1
+     30 frg00030 -1   30   1   79  213 1  1 G RHF             0      -1      -1
+     31 frg00031 -1   30   1   79  213 1  1 G RHF             0      -1      -1
+     32 frg00032  0   28   0   59  168 1  1 G RHF             0      -1      -1
+
+ Close fragment pairs, distance relative to vdW radii
+
+     21    11   0.44266 very close!
+     22    10   0.46816 very close!
+     29     4   0.44945 very close!
+     31     2   0.49606 very close!
+ CPU     0: STEP CPU TIME=     0.00 TOTAL CPU TIME=          2.2 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          5.1 SECONDS, CPU UTILIZATION IS    43.86%
+ dmexch needs              4921958  words of memory.
+ CPU     0: STEP CPU TIME=     0.02 TOTAL CPU TIME=          2.3 (      0.0 MIN)
+ TOTAL WALL CLOCK TIME=          5.1 SECONDS, CPU UTILIZATION IS    44.16%
+
+ Data exchange of    816588 words took     0.0 s.
+
+ RHF      monomer      1 corr= NONE       , L1=   253, L0=   253 ID=      1
+
+ Int dimensions: LABSIZ=1, NINTIC=  6005000 ININTIC=  3002500
+ Max L1 incore=   170 current l1=   253 force dirscf= T
+
+ DIRECT SCF CALCULATION, SCHWRZ=T   FDIFF=T,  DIRTHR=  0.00E+00 NITDIR=10
+
+                                                                                   NONZERO     BLOCKS
+ ITER EX DEM     TOTAL ENERGY        E CHANGE  DENSITY CHANGE    DIIS ERROR      INTEGRALS    SKIPPED
+   1  0  0   980204.5700578742980204.5700578742   1.094373598   0.000000000      141437953    9822818
+   2  1  0    -1474.4412048795*****************   0.303184000   0.000000000      141465910    9844986
+   3  2  0    -1474.7444429055    -0.3032380260   0.307815121   0.000000000      140463510    9980798
+   4  3  0    -1474.8379118516    -0.0934689460   0.214945310   0.000000000      139719252   10041268
+   5  4  0    -1474.8929882717    -0.0550764201   0.173337834   0.000000000      139023752   10085497
+   6  5  0    -1474.9220109921    -0.0290227205   0.140771810   0.000000000      138317288   10125014
+   7  6  0    -1474.9416486259    -0.0196376338   0.109640563   0.000000000      137633659   10157096
+   8  7  0    -1474.9530299429    -0.0113813170   0.091229204   0.000000000      136901373   10189202
+   9  8  0    -1474.9608507353    -0.0078207924   0.071681328   0.000000000      136175923   10217552
+  10  9  0    -1474.9656454871    -0.0047947519   0.060162374   0.000000000      135393875   10246737
+  11 10  0    -1474.9689384379    -0.0032929507   0.049507639   0.000000000      134617484   10273270
+  12 11  0    -1474.9710346440    -0.0020962061   0.041586139   0.000000000      133781781   10300267
+  13 12  0    -1474.9724709842    -0.0014363403   0.034457960   0.000000000      132962401   10325910
+  14 13  0    -1474.9734092289    -0.0009382447   0.028972938   0.000000000      132095182   10351698
+  15 14  0    -1474.9740517562    -0.0006425273   0.024134510   0.000000000      131234150   10376449
+  16 15  0    -1474.9744792173    -0.0004274611   0.020313268   0.000000000      130338667   10401230
+  17 16  0    -1474.9747723868    -0.0002931695   0.016988588   0.000000000      129426209   10425614
+  18 17  0    -1474.9749700881    -0.0001977013   0.014312204   0.000000000      128484314   10449928
+  19 18  0    -1474.9751060946    -0.0001360065   0.012005405   0.000000000      127533761   10473701
+  20 19  0    -1474.9751987836    -0.0000926890   0.010122534   0.000000000      126580993   10497627
+  21 20  0    -1474.9752628051    -0.0000640215   0.008509965   0.000000000      125597374   10521084
+  22 21  0    -1474.9753068113    -0.0000440062   0.007180552   0.000000000      124605582   10544743
+  23 22  0    -1474.9753373443    -0.0000305330   0.006046836   0.000000000      123580643   10568335
+  24 23  0    -1474.9753584829    -0.0000211386   0.005105461   0.000000000      122566093   10591689
+  25 24  0    -1474.9753732175    -0.0000147346   0.004304925   0.000000000      121551623   10614728
+  26 25  0    -1474.9753834811    -0.0000102636   0.003636753   0.000000000      120536565   10637510
+  27 26  0    -1474.9753906672    -0.0000071861   0.003069589   0.000000000      119494480   10660764
+  28 27  0    -1474.9753957000    -0.0000050328   0.002594419   0.000000000      118444575   10683494
+  29 28  0    -1474.9753992385    -0.0000035385   0.002191550   0.000000000      117398231   10706242
+  30 29  0    -1474.9754017277    -0.0000024892   0.001853094   0.000000000      116333508   10728951
+  31 30  0    -1474.9754034845    -0.0000017568   0.001566341   0.000000000      115267547   10751383
+  32 31  0    -1474.9754047251    -0.0000012405   0.001324944   0.000000000      114189645   10773934
+  33 32  0    -1474.9754056037    -0.0000008786   0.001120505   0.000000000      113131042   10796198
+  34 33  0    -1474.9754062259    -0.0000006223   0.000948139   0.000000000      112061287   10818501
+  35 34  0    -1474.9754066684    -0.0000004424   0.000802189   0.000000000      110986701   10841013
+  36 35  0    -1474.9754069825    -0.0000003142   0.000678994   0.000000000      109937872   10862936
+  37 36  0    -1474.9754072062    -0.0000002237   0.000574685   0.000000000      108860935   10884960
+  38 37  0    -1474.9754073656    -0.0000001593   0.000486560   0.000000000      107780016   10907112
+  39 38  0    -1474.9754074791    -0.0000001136   0.000411942   0.000000000      106680369   10929260
+  40 39  0    -1474.9754075606    -0.0000000815   0.000348857   0.000000000      105597571   10951241
+  41 40  0    -1474.9754076183    -0.0000000577   0.000295437   0.000000000      104510561   10973119
+  42 41  0    -1474.9754076597    -0.0000000414   0.000250248   0.000000000      103390558   10994837
+  43 42  0    -1474.9754076896    -0.0000000299   0.000211977   0.000000000      102282288   11016678
+  44 43  0    -1474.9754077106    -0.0000000210   0.000179589   0.000000000      101167373   11038603
+  45 44  0    -1474.9754077263    -0.0000000156   0.000152156   0.000000000      100074357   11060186
+  46 45  0    -1474.9754077368    -0.0000000106   0.000128930   0.000000000       98981446   11081743
+  47 46  0    -1474.9754077446    -0.0000000078   0.000109255   0.000000000       97864296   11103353
+  48 47  0    -1474.9754077502    -0.0000000055   0.000092593   0.000000000       96755064   11125097
+  49 48  0    -1474.9754077543    -0.0000000042   0.000078476   0.000000000       95668309   11146562
+  50 49  0    -1474.9754077574    -0.0000000031   0.000066517   0.000000000       94562866   11168091
+
+ SCF IS UNCONVERGED, TOO MANY ITERATIONS
+     TIME TO FORM FOCK OPERATORS=      36.6 SECONDS (       0.7 SEC/ITER)
+     FOCK TIME ON FIRST ITERATION=       1.0, LAST ITERATION=       0.6
+     TIME TO SOLVE SCF EQUATIONS=       1.2 SECONDS (       0.0 SEC/ITER)
+
+ FINAL RHF ENERGY IS        0.0000000000 AFTER  50 ITERATIONS
+ ...... END OF RHF CALCULATION ......
+ CPU     0: STEP CPU TIME=    41.53 TOTAL CPU TIME=         43.8 (      0.7 MIN)
+ TOTAL WALL CLOCK TIME=         48.4 SECONDS, CPU UTILIZATION IS    90.46%
+
+ Iter=  1 iFrag=      1 EFMO=     0.000000000, DD= 1.089030765, DE= 0.000000000
+
+
+ RHF      monomer     24 corr= NONE       , L1=   242, L0=   242 ID=      2
+
+ Int dimensions: LABSIZ=1, NINTIC=  6005000 ININTIC=  3002500
+ Max L1 incore=   170 current l1=   242 force dirscf= T
+
+ DIRECT SCF CALCULATION, SCHWRZ=T   FDIFF=T,  DIRTHR=  0.00E+00 NITDIR=10
+
+                                                                                   NONZERO     BLOCKS
+ ITER EX DEM     TOTAL ENERGY        E CHANGE  DENSITY CHANGE    DIIS ERROR      INTEGRALS    SKIPPED
+   1  0  0  1488419.2732521426*****************   1.207155694   0.000000000      130639308    7796895
+   2  1  0    -1346.1777674584*****************   0.334355144   0.000000000      130669223    7812773
+   3  2  0    -1346.4800962895    -0.3023288311   0.412466649   0.000000000      129933430    7922756
+   4  3  0    -1346.5668576160    -0.0867613264   0.346040295   0.000000000      129301381    7974223
+   5  4  0    -1346.6317367720    -0.0648791560   0.296492514   0.000000000      128833706    8006573
+   6  5  0    -1346.6632913836    -0.0315546116   0.274416134   0.000000000      128346861    8034801
+   7  6  0    -1346.6933571556    -0.0300657720   0.230497186   0.000000000      127905869    8057038
+   8  7  0    -1346.7095588682    -0.0162017125   0.211688461   0.000000000      127413557    8080012
+   9  8  0    -1346.7252926889    -0.0157338207   0.178274565   0.000000000      126919631    8100334
+  10  9  0    -1346.7343971143    -0.0091044254   0.161683544   0.000000000      126385230    8121601
+  11 10  0    -1346.7429348560    -0.0085377417   0.136969057   0.000000000      125842585    8141479
+  12 11  0    -1346.7481555216    -0.0052206656   0.122910778   0.000000000      125254682    8161782
+  13 12  0    -1346.7528426826    -0.0046871610   0.104748383   0.000000000      124667946    8181315
+  14 13  0    -1346.7558366630    -0.0029939805   0.093238305   0.000000000      124050177    8201006
+  15 14  0    -1346.7584227561    -0.0025860931   0.079871427   0.000000000      123418886    8220555
+  16 15  0    -1346.7601332961    -0.0017105400   0.070673425   0.000000000      122762635    8239891
+  17 16  0    -1346.7615654380    -0.0014321418   0.060793143   0.000000000      122089782    8259012
+  18 17  0    -1346.7625395981    -0.0009741601   0.053563052   0.000000000      121420327    8277914
+  19 18  0    -1346.7633356714    -0.0007960733   0.046223992   0.000000000      120735170    8296541
+  20 19  0    -1346.7638894702    -0.0005537988   0.040603488   0.000000000      120024825    8315367
+  21 20  0    -1346.7643337144    -0.0004442442   0.035127296   0.000000000      119295526    8334080
+  22 21  0    -1346.7646483745    -0.0003146602   0.030790411   0.000000000      118554771    8352751
+  23 22  0    -1346.7648972689    -0.0002488944   0.026688484   0.000000000      117813541    8371541
+  24 23  0    -1346.7650761218    -0.0001788529   0.023358671   0.000000000      117066511    8390028
+  25 24  0    -1346.7652161100    -0.0001399882   0.020276452   0.000000000      116276530    8408765
+  26 25  0    -1346.7653178710    -0.0001017610   0.017728337   0.000000000      115507331    8427213
+  27 26  0    -1346.7653968952    -0.0000790242   0.015406467   0.000000000      114689383    8445710
+  28 27  0    -1346.7654548744    -0.0000579792   0.013460842   0.000000000      113881850    8464202
+  29 28  0    -1346.7654996367    -0.0000447623   0.011708208   0.000000000      113052752    8482762
+  30 29  0    -1346.7655327233    -0.0000330866   0.010224767   0.000000000      112230414    8501176
+  31 30  0    -1346.7655581594    -0.0000254361   0.008899665   0.000000000      111378105    8519593
+  32 31  0    -1346.7655770713    -0.0000189119   0.007769669   0.000000000      110550849    8537593
+  33 32  0    -1346.7655915676    -0.0000144963   0.006766495   0.000000000      109711106    8555799
+  34 33  0    -1346.7656023982    -0.0000108306   0.005906224   0.000000000      108861890    8573779
+  35 34  0    -1346.7656106811    -0.0000082829   0.005145956   0.000000000      108022911    8591781
+  36 35  0    -1346.7656168932    -0.0000062122   0.004491240   0.000000000      107172923    8609785
+  37 36  0    -1346.7656216365    -0.0000047432   0.003914555   0.000000000      106304454    8627739
+  38 37  0    -1346.7656252074    -0.0000035710   0.003416353   0.000000000      105418888    8645624
+  39 38  0    -1346.7656279294    -0.0000027219   0.002978599   0.000000000      104524279    8663558
+  40 39  0    -1346.7656299838    -0.0000020544   0.002599508   0.000000000      103647650    8681330
+  41 40  0    -1346.7656315496    -0.0000015658   0.002267006   0.000000000      102767779    8699204
+  42 41  0    -1346.7656327335    -0.0000011839   0.001978535   0.000000000      101878699    8716905
+  43 42  0    -1346.7656336361    -0.0000009025   0.001725845   0.000000000      101010838    8734303
+  44 43  0    -1346.7656343194    -0.0000006833   0.001506306   0.000000000      100124263    8751824
+  45 44  0    -1346.7656348400    -0.0000005206   0.001314181   0.000000000       99236003    8769155
+  46 45  0    -1346.7656352355    -0.0000003955   0.001147079   0.000000000       98324525    8786611
+  47 46  0    -1346.7656355364    -0.0000003009   0.001000942   0.000000000       97447106    8803697
+  48 47  0    -1346.7656357647    -0.0000002283   0.000873731   0.000000000       96579535    8820619
+  49 48  0    -1346.7656359385    -0.0000001739   0.000762534   0.000000000       95708152    8837313
+  50 49  0    -1346.7656360711    -0.0000001326   0.000665673   0.000000000       94840587    8854344
+
+ SCF IS UNCONVERGED, TOO MANY ITERATIONS
+     TIME TO FORM FOCK OPERATORS=      34.5 SECONDS (       0.7 SEC/ITER)
+     FOCK TIME ON FIRST ITERATION=       0.8, LAST ITERATION=       0.6
+     TIME TO SOLVE SCF EQUATIONS=       1.1 SECONDS (       0.0 SEC/ITER)
+
+ FINAL RHF ENERGY IS        0.0000000000 AFTER  50 ITERATIONS
+ ...... END OF RHF CALCULATION ......
+ CPU     0: STEP CPU TIME=    44.51 TOTAL CPU TIME=         88.3 (      1.5 MIN)
+ TOTAL WALL CLOCK TIME=         94.6 SECONDS, CPU UTILIZATION IS    93.38%
+
+ Iter=  1 iFrag=     24 EFMO=     0.000000000, DD= 1.118201964, DE= 0.000000000
+
+
+ RHF      monomer     21 corr= NONE       , L1=   242, L0=   242 ID=      3
+
+ Int dimensions: LABSIZ=1, NINTIC=  6005000 ININTIC=  3002500
+ Max L1 incore=   170 current l1=   242 force dirscf= T
+
+ DIRECT SCF CALCULATION, SCHWRZ=T   FDIFF=T,  DIRTHR=  0.00E+00 NITDIR=10
+
+                                                                                   NONZERO     BLOCKS
+ ITER EX DEM     TOTAL ENERGY        E CHANGE  DENSITY CHANGE    DIIS ERROR      INTEGRALS    SKIPPED
+   1  0  0  1563024.7433922181*****************   1.055924548   0.000000000      122451557    7927085
+   2  1  0    -1342.5426999179*****************   0.299081093   0.000000000      122465148    7945771
+   3  2  0    -1342.8473924934    -0.3046925755   0.282435075   0.000000000      121716093    8055390
