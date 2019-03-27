@@ -18,6 +18,18 @@ while IFS=, read col1 col2 col3; do {if($col3 < $col2 && $col3 > $col1){x=-1}} p
 
 
 
+awk -v frg1=1 -v frg2=36 '{if($2<=frg2 && $2>=frg1)print}' 1XHP_nlb_decoy_1.pdb | 
+awk '{ if($3=="P")print "P-present"; else print "no-P"}'
+
+#print line 1
+awk -v line=1 '{if (NR==line) print}' 1XHP_nlb_decoy_1.pdb
+frg1=`awk -v line=1 '{if (NR==line) print $1}' 1XHP_nlb_decoy_1.pdb`
+frg2=`awk -v line=1 '{if (NR==line) print $2}' 1XHP_nlb_decoy_1.pdb`
+#count number of lines in a file
+lines=`wc -l 1XHP_nlb_decoy_1.pdb | awk '{print $1}'`
+#create a set of numbers that go between 1-lines
+lines=`seq 1 $lines`
+for line in $lines; do echo "$line"; done
 
 
 

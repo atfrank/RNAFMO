@@ -7,6 +7,6 @@ else
 	file=$1
 	
 echo " \$FMOXYZ" 
-awk '{if ($2 < 10000) print "   ", $2, "  ", $13, "  ", $7, "  ", $8, "  ", $9}' ${file} | sed '$d'
+awk '{if ($2 < 10000) print "   ", $2, "  ", substr($3,0,1), "  ", $7, "  ", $8, "  ", $9}' ${file} | sed '$d'
 echo " \$END" 
 fi
