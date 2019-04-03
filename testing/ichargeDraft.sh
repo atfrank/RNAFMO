@@ -14,10 +14,10 @@
 
 	awk -n '{if($3 < $2 && $3 > $1) print -1}' compare_P_and_end.txt /etc/passwd
 
+	#syntax error?
 	while IFS=, read $1 $2 $3; do {if($3 < $2 && $3 > $1){x=-1}} print x {else{x=0}} print x; done < compare_P_and_end.txt
 
 
-	#dr. frank notes
 
 	awk -v frg1=1 -v frg2=36 '{if($2<=frg2 && $2>=frg1)print}' 1XHP_nlb_decoy_1.pdb | awk '{ if($3=="P")print "P-present"; else print "no-P"}'
 
