@@ -28,11 +28,7 @@ else
 	}' | sed 's/$/   0/' | sed 's/^/               /' > indat.txt
 	
 	#ICHARGE
-	#prints -1 when column 3 shows C5’, deletes 2nd row, adds 0 at the end, print column as 
-	#row and separate with commas
-	awk -v atm1="C5'" '{if($3==atm1) print '-1'}' ${file} | sed '2d' | 
-	sed -e "\$a0" | awk 'BEGIN { ORS = ", " } { print }' | sed '$s/..$//' | awk '{print}' | 
-	fold -w40 > icharge.txt
+	./ichargeDraft.sh
 	
 	#FRGNAM
 	#print number of fragments in ascending order, add “frag” in the beginning of each row, 
