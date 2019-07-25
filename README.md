@@ -2,31 +2,32 @@
 Tools for Applying FMO Calculations to RNA containing systems
 
 ## Current Limitations
-- Only tested on single stranded RNA only systems
+- Only works for single-stranded RNA only systems
 - Can't handle missing residues or non-standard PDB formatting
 
 ## Typical FMO calculation (On Gollum)
 
+### (1) Minimize systems to remove clashes and regularize structure
 ```
-# (1) minimize and (2) generate FMO input
 COORS=/home/afrankz/testbed/FARFAR_DECOYS/2KOC/final_decoys/coordinates/
-
-# (1) minimize
 frames=`seq 1 10 50`
 for frame in $frames
 do
     /utility./prepare_database.sh ${COORS}/decoy_${frame}.pdb decoy_${frame} 100 charmm 1  tmp/    
 done
+````
 
-# (2) generate FMO input
+### (2) Generate FMO input
+```
 frames=`seq 1 10 50`
 for frame in $frames
 do
-    
     ./rnafmo_input.sh decoy_${frame}_charmm.pdb > fmo_input_${frame}.inp
 done
+````
 
-# (3) run FMO calculation
+### (3) Write and submit SLURM jobs to carry out FMO calculation
+```
 frames=`seq 1 10 50`
 for frame in $frames
 do
@@ -45,5 +46,4 @@ do
     # Submit SLURM script
     sbatch -N 1 -n 14 --exclude=gollum152 -p frank submit_frame_${frame}.sh  
 done
-
 ````
