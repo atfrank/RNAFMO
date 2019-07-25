@@ -1,6 +1,9 @@
 # RNAFMO
 Tools for Applying FMO Calculations to RNA containing systems
 
+## Current Limitation
+- Only tested on single stranded RNA only systems
+- Can't handle missing residues or non-standard PDB formatting
 
 ## Typical FMO calculation
 
