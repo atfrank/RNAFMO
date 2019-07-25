@@ -1,11 +1,11 @@
 # RNAFMO
 Tools for Applying FMO Calculations to RNA containing systems
 
-## Current Limitation
+## Current Limitations
 - Only tested on single stranded RNA only systems
 - Can't handle missing residues or non-standard PDB formatting
 
-## Typical FMO calculation
+## Typical FMO calculation (On Gollum)
 
 ```
 # (1) minimize and (2) generate FMO input
