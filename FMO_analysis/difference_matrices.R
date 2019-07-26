@@ -18,28 +18,34 @@ plot_difference <- function(mat_a, mat_b, label = ""){
 }
 
 
-setwd("~/Desktop/FMO-test/")
+setwd("~/Documents/GitHub/RNAFMO/FMO_analysis/")
 
 names = c("I","J","DL","Z","R","Q","EIJ.EI.EJ","dDIJ*.VIJ","total","Ees","Eex","Ect+mix","Edisp","Gsol")
-decoy_1 = read.table("~/Desktop/FMO-test/output_1_PIEDA_.out", col.names = names)
-decoy_11 = read.table("~/Desktop/FMO-test/output_11_PIEDA_.out", col.names = names)
-decoy_21 = read.table("~/Desktop/FMO-test/output_21_PIEDA_.out", col.names = names)
-decoy_31 = read.table("~/Desktop/FMO-test/output_31_PIEDA_.out", col.names = names)
+decoy_1 =  read.table("data/output_1_PIEDA_.out", col.names = names)
+decoy_11 = read.table("data/output_11_PIEDA_.out", col.names = names)
+decoy_21 = read.table("data/output_21_PIEDA_.out", col.names = names)
+decoy_31 = read.table("data/output_31_PIEDA_.out", col.names = names)
+decoy_31 = read.table("data/output_41_PIEDA_.out", col.names = names)
 
 mat_1 = pair_matrix(decoy_1)
 mat_11 = pair_matrix(decoy_11)
 mat_21 = pair_matrix(decoy_21)
 mat_31 = pair_matrix(decoy_31)
+mat_41 = pair_matrix(decoy_41)
 
 
-pdf(file = "dE_1_11.pdf", width = 4.5, height = 4.5, pointsize = 15)
+pdf(file = "data/dE_1_11.pdf", width = 4.5, height = 4.5, pointsize = 15)
 plot_difference(mat_1, mat_11, label = "decoy 1 vs 11")
 dev.off()
 
-pdf(file = "dE_1_21.pdf", width = 4.5, height = 4.5, pointsize = 15)
+pdf(file = "data/dE_1_21.pdf", width = 4.5, height = 4.5, pointsize = 15)
 plot_difference(mat_1, mat_21, label = "decoy 1 vs 21")
 dev.off()
 
-pdf(file = "dE_1_31.pdf", width = 4.5, height = 4.5, pointsize = 15)
+pdf(file = "data/dE_1_31.pdf", width = 4.5, height = 4.5, pointsize = 15)
 plot_difference(mat_1, mat_31, label = "decoy 1 vs 31")
+dev.off()
+
+pdf(file = "data/dE_1_41.pdf", width = 4.5, height = 4.5, pointsize = 15)
+plot_difference(mat_1, mat_41, label = "decoy 1 vs 41")
 dev.off()
