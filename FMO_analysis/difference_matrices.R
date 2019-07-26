@@ -25,7 +25,7 @@ decoy_1 =  read.table("data/output_1_PIEDA_.out", col.names = names)
 decoy_11 = read.table("data/output_11_PIEDA_.out", col.names = names)
 decoy_21 = read.table("data/output_21_PIEDA_.out", col.names = names)
 decoy_31 = read.table("data/output_31_PIEDA_.out", col.names = names)
-decoy_31 = read.table("data/output_41_PIEDA_.out", col.names = names)
+decoy_41 = read.table("data/output_41_PIEDA_.out", col.names = names)
 
 mat_1 = pair_matrix(decoy_1)
 mat_11 = pair_matrix(decoy_11)
