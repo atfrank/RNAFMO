@@ -37,9 +37,9 @@ plot_difference(mat_1, mat_11, label = "decoy 1 vs 11")
 dev.off()
 
 pdf(file = "dE_1_21.pdf", width = 4.5, height = 4.5, pointsize = 15)
-plot_difference(mat_1, mat_21, label = "decoy 1 vs 11")
+plot_difference(mat_1, mat_21, label = "decoy 1 vs 21")
 dev.off()
 
 pdf(file = "dE_1_31.pdf", width = 4.5, height = 4.5, pointsize = 15)
-plot_difference(mat_1, mat_31, label = "decoy 1 vs 11")
+plot_difference(mat_1, mat_31, label = "decoy 1 vs 31")
 dev.off()
