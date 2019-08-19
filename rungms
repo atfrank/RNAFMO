@@ -64,15 +64,15 @@
 set TARGET=sockets
 #set GMSPATH=/export/apps/gamess/src/gamess
 #set GMSPATHEXE=/export/apps/gamess/src/build
-set GMSPATH=/export/apps/CentOS7/gamess/src/gamess
-set GMSPATHEXE=/export/apps/CentOS7/gamess/src/build
+set GMSPATH=/export/apps/CentOS7/gamess/src/gamess/
+set GMSPATHEXE=/export/apps/CentOS7/gamess/src/build/
 #
 set JOB=$1      # name of the input file xxx.inp, give only the xxx part
 set VERNO=$2    # revision number of the executable created by 'lked' step
 set NCPUS=$3    # number of compute processes to be run
 set SCR=$4
 set USERSCR=$5
-#rm -rf ${USERSCR}/* ${SCR}/*
+# rm -rf ${USERSCR}/* ${SCR}/*
 
 #
 # provide defaults if last two arguments are not given to this script
@@ -467,13 +467,13 @@ skipsetup:
    endif
 
    if ($REMDjob == true) then
-      source $GMSPATH/tools/remd.csh $TARGET $nREMDreplica
+      source ${GMSPATH}/tools/remd.csh $TARGET $nREMDreplica
       if ($status > 0) exit $status
    endif
 #
 #        Just make sure we have the binaries, before we try to run
 #
-   if ((-x $GMSPATHEXE/gamess.R3.x) && (-x $GMSPATHEXE/ddikick.x)) then
+   if ((-x ${GMSPATHEXE}/gamess.R3.x) && (-x ${GMSPATHEXE}/ddikick.x)) then
    else
       echo The GAMESS executable gamess.$VERNO.x
       echo or else the DDIKICK executable ddikick.x

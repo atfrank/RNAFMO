@@ -28,12 +28,12 @@ else
     }' | sed 's/$/   0/' | sed 's/^/               /' > indat.txt
     
     #ICHARGE
-    utility/./icharge.sh ${file} > icharge.txt
+    ${RNAFMO}/utility/./icharge.sh ${file} > icharge.txt
     
     #FRGNAM
     #print number of fragments in ascending order, add “frag” in the beginning of each row, 
     #print column as row and separate with commas
-    FRAGNAM=`seq $NFRAG | awk '{print "Frag" $0}' | awk 'BEGIN { ORS = ", " } { print }' | sed '$s/..$//'`
+    FRAGNAM=`seq $NFRAG | awk '{print "F" $0}' | awk 'BEGIN { ORS = ", " } { print }' | sed '$s/..$//' | fmt --width=60`
     #FMOBND
     grep "ATOM" ${file} | awk -v atm1="C5'" -v atm2="O5'" '{if(($3==atm1 && $2>10) || 
     ($3==atm2 && $2>10)) print $2}' | sed -n '1~2!p' |
@@ -51,7 +51,7 @@ else
     echo "      NLAYER=1"
     echo "      MPLEVL(1)=2"
     echo "      NFRAG=$NFRAG"
-    echo "      ICHARG(1)=`cat icharge.txt`"
+    echo "      ICHARG(1)=`cat icharge.txt | sed 's/ /, /g' | sed 's/..$//' | fmt --width=60`"
     echo "      FRGNAM(1)=$FRAGNAM"
     echo "      indat(1)=0"
     echo "`cat indat.txt`"

@@ -1,0 +1,21 @@
+addPath /home/afrankz/new_amber_parameters/ff99bsc0chiOL
+addPath /home/afrankz/new_amber_parameters/modifed_bases/
+addPath /home/afrankz/local_software/repo/amber14/dat/leap/cmd/oldff/
+source leaprc.ff99bsc0 
+loadamberprep all_nuc94_ol_bsc0.in  
+loadamberparams frcmod.ol.dat  
+source modified.bases.load
+addPdbResMap {
+{ 0 "GUA" "RG5" } { 1 "GUA" "RG3" } { "GUA" "RG" }
+{ 0 "ADE" "RA5" } { 1 "ADE" "RA3" } { "ADE" "RA" }
+{ 0 "URA" "RU5" } { 1 "URA" "RU3" } { "URA" "RU" }
+{ 0 "CYT" "RC5" } { 1 "CYT" "RC3" } { "CYT" "RC" }
+{ 0 "CBV" "RC5" } { 1 "CBV" "RC3" } { "CBV" "RC" }
+{ 0 "CG1" "RG5" } { 1 "CG1" "RG3" } { "CG1" "RG" }
+{ 0 "DPR" "PRO" } { 1 "DPR" "PRO" } { "DPR" "PRO" }
+}
+nucleic= loadPdb tmp//rna.pdb 
+saveAmberParm  nucleic tmp//rna_amber.prmtop tmp//rna_amber.crd  
+savePdb  nucleic tmp//rna_amber.pdb 
+savemol2  nucleic tmp//rna_amber.mol2 1
+quit 
