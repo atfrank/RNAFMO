@@ -1,0 +1,1 @@
+$RNAFMO variable not set
