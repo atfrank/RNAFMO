@@ -22,7 +22,7 @@ done
 frames=`seq 1 1 6`
 for frame in $frames
 do
-    ./rnafmo_input.sh 1F5G_${frame}_charmm.pdb > fmo_input_${frame}.inp
+    ./rnafmo_input.sh 1F5G_${frame}_charmm.pdb > 1F5G_fmo_input_${frame}.inp
 done
 ````
 
