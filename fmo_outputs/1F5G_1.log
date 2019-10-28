@@ -1,0 +1,17 @@
+----- GAMESS execution script 'rungms' -----
+This job is running on host gollum081.lsa.umich.edu
+under operating system Linux at Mon Oct 21 13:13:47 EDT 2019
+Available scratch disk space (Kbyte units) at beginning of the job is
+Filesystem     1K-blocks  Used Available Use% Mounted on
+/dev/sda4      426933580 33260 426900320   1% /scratch
+GAMESS temporary binary files will be written to /scratch/hazwong/454379/1F5G_1/usrc
+GAMESS supplementary output files will be written to /scratch/hazwong/454379/1F5G_1/src
+Copying input file 1F5G_1_fmo_input.inp to your run's scratch directory...
+This is a GDDI run, keeping various output files on local disks
+ 
+Assuming a single but multicore node.
+ 
+The GAMESS executable gamess.R3.x
+or else the DDIKICK executable ddikick.x
+could not be found in directory /export/apps/CentOS7/gamess/src/gamess/,
+or else they did not properly link to executable permission.
