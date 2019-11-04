@@ -1,4 +1,4 @@
-COORS=/home/colltac/RNAFMO/2LHP_0/
+COORS=/home/hazwong/test/git_repository/RNAFMO/2LHP_0/
 frames=`seq 1 1 6`
 for frame in $frames
 do
