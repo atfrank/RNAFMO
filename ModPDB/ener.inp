@@ -1,0 +1,8 @@
+open unit 10 read form name "/export/apps/CHARMM/toppar/top_all27_prot_na.rtf"
+read rtf card unit 10
+close unit 10
+open unit 10 read form name "/export/apps/CHARMM/toppar/par_all27_prot_na.prm"
+read para card unit 10 
+close unit 10
+faster on
+stop
