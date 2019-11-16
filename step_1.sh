@@ -1,4 +1,4 @@
-molecule="1SZY"
+molecule="4A4U"
 COORS=/home/hazwong/test/git_repository/RNAFMO/${molecule}_0
 #COORS=/home/colltac/RNAFMO/${molecule}_0/
 frames=`seq 1 1 6`
