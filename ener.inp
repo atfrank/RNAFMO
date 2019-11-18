@@ -5,13 +5,21 @@ open unit 10 read form name "/export/apps/CHARMM/toppar/par_all27_prot_na.prm"
 read para card unit 10 
 close unit 10
 faster on
-open unit 10 read form name "gollum-pdb22502-N01A"
+open unit 10 read form name "gollum-pdb33589-N01A"
 read sequ pdb unit 10
 generate first 5TER last 3TER N01A setup warn
 close unit 10
 auto angle dihe
+open unit 10 read form name "gollum-pdb33589-N01B"
+read sequ pdb unit 10
+generate first 5TER last 3TER N01B setup warn
+close unit 10
 auto angle dihe
-open unit 10 read form name "gollum-pdb22502-N01A"
+auto angle dihe
+open unit 10 read form name "gollum-pdb33589-N01A"
+read coor pdb unit 10 resi
+close unit 10
+open unit 10 read form name "gollum-pdb33589-N01B"
 read coor pdb unit 10 resi
 close unit 10
 bomlev -2
@@ -39,9 +47,9 @@ OFFX 2.1 -
 CORR 1 -
 SON 1.2 SOFF 1.5 -
 WTYP 1 NPHI 5 SA 0.015 SB 0.9
-cons harm force 0.5 mass select ( ( resid 1:8 .and. segid N01A ) ) .and. ( .not. hydrogen ) end  
+cons harm force 0.5 mass select ( ( resid 1:6 .and. segid N01A ) ) .and. ( .not. hydrogen ) end  
 mini sd nprint 10 inbfreq -1 step 0.005 nstep 100
-open unit 10 write form name "pdb22502-out"
+open unit 10 write form name "pdb33589-out"
 write coor pdb unit 10
 *
 close unit 10
