@@ -1,6 +1,6 @@
 export RNAFMO=/home/hazwong/test/git_repository/RNAFMO
 #export RNAFMO=/home/colltac/RNAFMO/
-molecule="EXP"
+molecule="2LHP"
 frames=`seq 1 1 6`
 for frame in $frames
 do
