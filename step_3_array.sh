@@ -3,7 +3,7 @@
 #SBATCH -A frank
 #SBATCH --time=168:00:00
 
-molecule="EXP"
+molecule="2LU0"
 
 # get current local
 final_dest=`pwd`
