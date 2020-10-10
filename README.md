@@ -9,7 +9,7 @@ Tools for Applying FMO Calculations to RNA containing systems
 ### RNA receptor
 ```
 export RNAFMO=/path/RNAFMO/
-${RNAFMO}/prep_fmo/ligand.sh ${RNAFMO}/test/rna.pdb
+${RNAFMO}/prep_fmo/rna.sh ${RNAFMO}/test/rna.pdb
 ```
 
 ### Ligand
