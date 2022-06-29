@@ -3,6 +3,7 @@ Tools for Applying FMO Calculations to RNA containing systems
 
 ## Current Limitations
 - Can't handle missing residues or non-standard PDB formatting
+- Tested on Linux and Mac OS X
 
 ## Examples:
 
