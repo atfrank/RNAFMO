@@ -5,7 +5,7 @@ Tools for Applying FMO Calculations to RNA containing systems
 - Can't handle missing residues or non-standard PDB formatting
 - Tested on Linux and Mac OS X
 
-## Examples:
+## Demonstration:
 
 ### RNA receptor
 ```
@@ -24,3 +24,8 @@ ${RNAFMO}/prep_fmo/ligand.sh ${RNAFMO}/test/ligand.pdb -1 > ${RNAFMO}/test/ligan
 export RNAFMO=/path/RNAFMO/
 ${RNAFMO}/prep_fmo/rna_ligand.sh ${RNAFMO}/test/rna.pdb ${RNAFMO}/test/ligand.pdb -1 > ${RNAFMO}/test/rna_ligand_fmo.inp
 ```
+
+Note that expected output can be found ```${RNAFMO}/test/```
+
+## License
+This project is covered under the  GPL-3.0 License.
